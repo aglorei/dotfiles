@@ -99,6 +99,7 @@ pacman:
     - htop
     - jdk10-openjdk
     - jq
+    - kubectl
     - lastpass-cli
     - lsof
     - maven
