@@ -83,6 +83,7 @@ pacman:
     - base-devel
     # individual
     - ansible
+    - apache
     - arp-scan
     - aws-cli
     - bind-tools
