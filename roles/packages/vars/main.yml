@@ -96,6 +96,7 @@ pacman:
     - fzf
     - gist
     - git
+    - gnuplot
     - grub
     - htop
     - jdk10-openjdk
