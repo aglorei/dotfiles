@@ -63,7 +63,8 @@ homebrew:
     - authy
     - docker
     - firefox-beta
-    - font-ubuntu-mono-derivative-powerline
+    - font-gohu-nerd-font-mono
+    - font-mononoki-nerd-font-mono
     - google-chrome-beta
     - iterm2-beta
     - kiibohd-configurator
