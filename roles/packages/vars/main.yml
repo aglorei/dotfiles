@@ -99,7 +99,6 @@ pacman:
     - gnuplot
     - grub
     - htop
-    - jdk10-openjdk
     - jq
     - kubectl
     - lastpass-cli
@@ -112,6 +111,7 @@ pacman:
     - openssh
     - p7zip
     - packer
+    - postgresql
     - python
     - python-neovim
     - python-pipenv
