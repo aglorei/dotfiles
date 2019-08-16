@@ -48,7 +48,7 @@ homebrew:
     - telnet
     - terraform
     - tmux
-    - transmission
+    - transmission-cli
     - tree
     - tty-clock
     - vim

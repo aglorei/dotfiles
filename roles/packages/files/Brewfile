@@ -81,7 +81,7 @@ brew "terraform"
 # Terminal multiplexer
 brew "tmux"
 # Lightweight BitTorrent client
-brew "transmission"
+brew "transmission-cli"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Digital clock in ncurses
