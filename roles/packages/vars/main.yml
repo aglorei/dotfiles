@@ -66,8 +66,9 @@ homebrew:
     - font-mononoki-nerd-font-mono
     - google-chrome-beta
     - iterm2-beta
-    - kiibohd-configurator
     - java
+    - keybase
+    - kiibohd-configurator
     - mactex
     - minikube
     - rocket
@@ -100,6 +101,7 @@ pacman:
     - grub
     - htop
     - jq
+    - keybase
     - kubectl
     - lastpass-cli
     - lsof
