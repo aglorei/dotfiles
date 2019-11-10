@@ -6,11 +6,9 @@
   <string>com.{{ ansible_user_id | regex_replace('\.', '') }}.dotfiles</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/bin/su</string>
-    <string>-l</string>
-    <string>{{ ansible_user_id }}</string>
+    <string>/bin/bash</string>
     <string>-c</string>
-    <string>{{ cron_command }}</string>
+    <string>PATH=/usr/local/bin:$PATH {{ cron_command }}</string>
   </array>
   <key>StartCalendarInterval</key>
   <array>
@@ -31,11 +29,6 @@
       <integer>45</integer>
     </dict>
   </array>
-  <key>EnvironmentVariables</key>
-  <dict>
-    <key>ANSIBLE_FORCE_COLOR</key>
-    <string>1</string>
-  </dict>
   <key>StandardOutPath</key>
   <string>{{ logfile }}</string>
   <key>StandardErrorPath</key>

@@ -7,8 +7,7 @@
 - name: Add ansible-pull launchd configuration to root LaunchAgents
   template:
     src: launchd.j2
-    dest: "/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.plist"
-  become: yes
+    dest: "{{ ansible_user_dir }}/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.plist"
   notify: start-launchd
 
 - name: Create newsyslog rotation config for dotfiles.log
