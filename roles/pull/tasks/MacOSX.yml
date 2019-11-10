@@ -4,6 +4,14 @@
     name: "{{ homebrew['brews'] }}"
     state: present
 
+- name: Ensure logfile path with correct ownership
+  file:
+    path: "{{ logfile }}"
+    mode: 0644
+    owner: "{{ ansible_user_id }}"
+    state: file
+  become: yes
+
 - name: Add ansible-pull launchd configuration to root LaunchAgents
   template:
     src: launchd.j2
