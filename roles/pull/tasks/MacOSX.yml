@@ -9,7 +9,7 @@
     path: "{{ logfile }}"
     mode: 0644
     owner: "{{ ansible_user_id }}"
-    state: file
+    state: touch
   become: yes
 
 - name: Add ansible-pull launchd configuration to root LaunchAgents
