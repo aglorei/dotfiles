@@ -27,11 +27,11 @@ homebrew:
     - gist
     - git
     - gnupg
+    - helm
     - htop
     - ifstat
     - jq
     - kubernetes-cli
-    - kubernetes-helm
     - lastpass-cli
     - neofetch
     - neovim

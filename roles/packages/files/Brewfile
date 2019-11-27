@@ -36,6 +36,8 @@ brew "gist"
 brew "git"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# The Kubernetes package manager
+brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Tool to report network interface bandwidth
@@ -44,8 +46,6 @@ brew "ifstat"
 brew "jq"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
-# The Kubernetes package manager
-brew "kubernetes-helm"
 # LastPass command-line interface tool
 brew "lastpass-cli"
 # Fast, highly customisable system info script
