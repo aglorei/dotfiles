@@ -1,2 +1,2 @@
-# logfilename          [owner:group]    mode count size when  flags [/pid_file] [sig_num]
-{{ logfile }}                           644  7     *    $D0   Z
+# logfilename [owner:group]                                 mode count size when flags [/pid_file] [sig_num]
+{{ logfile }} {{ ansible_user_uid }}:{{ ansible_user_gid }} 644  7     *    $D0  Z
