@@ -68,7 +68,6 @@ homebrew:
     - iterm2-beta
     - java
     - keybase
-    - kiibohd-configurator
     - mactex
     - minikube
     - rocket
