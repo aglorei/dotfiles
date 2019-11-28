@@ -27,11 +27,11 @@ homebrew:
     - gist
     - git
     - gnupg
+    - helm
     - htop
     - ifstat
     - jq
     - kubernetes-cli
-    - kubernetes-helm
     - lastpass-cli
     - neofetch
     - neovim
@@ -61,14 +61,13 @@ homebrew:
   casks:
     - alfred
     - authy
+    - brave-browser-beta
     - docker
     - firefox-beta
     - font-mononoki-nerd-font-mono
-    - google-chrome-beta
     - iterm2-beta
     - java
     - keybase
-    - kiibohd-configurator
     - mactex
     - minikube
     - rocket
