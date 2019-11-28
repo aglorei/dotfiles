@@ -1,2 +1,0 @@
----
-vim_bundles_directory: "{{ ansible_user_dir }}/.vim/bundles"

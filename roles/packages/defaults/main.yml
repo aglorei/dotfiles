@@ -1,7 +1,4 @@
 ---
-pacman_packages:
-  - tmux
-  - vim
 homebrew_brews:
   - vim
 homebrew_brews_with_options:
@@ -15,3 +12,7 @@ homebrew_taps:
   - homebrew/cask-drivers
   - homebrew/core
   - homebrew/services
+
+pacman_packages:
+  - tmux
+  - vim
