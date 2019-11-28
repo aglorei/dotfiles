@@ -1,7 +1,17 @@
 ---
-brewfile_dest: "{{ ansible_user_dir }}/.Brewfile"
-chunkwmrc_dest: "{{ ansible_user_dir }}/.chunkwmrc"
 pacman_packages:
-  - base
-  - base-devel
-skhdrc_dest: "{{ ansible_user_dir }}/.skhdrc"
+  - tmux
+  - vim
+homebrew_brews:
+  - vim
+homebrew_brews_with_options:
+  tmux:
+    - HEAD
+homebrew_casks:
+  - alfred
+homebrew_taps:
+  - homebrew/bundle
+  - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/core
+  - homebrew/services
