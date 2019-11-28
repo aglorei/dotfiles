@@ -1,6 +1,8 @@
 ---
 git_core:
   editor: nvim
+
+homebrew_brewfile: "{{ lookup('file', inventory_hostname + '/Brewfile') }}"
 homebrew_brews:
   - ansible
   - arp-scan
@@ -76,6 +78,7 @@ homebrew_taps:
   - homebrew/core
   - homebrew/services
   - koekeishiya/formulae
+
 pacman_packages:
   # groups
   - base

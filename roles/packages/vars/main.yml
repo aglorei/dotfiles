@@ -1,5 +1,5 @@
 ---
-brewfile_dest: "{{ ansible_user_dir }}/.Brewfile"
+homebrew_brewfile_dest: "{{ ansible_user_dir }}/.Brewfile"
 chunkwmrc_dest: "{{ ansible_user_dir }}/.chunkwmrc"
 homebrew:
   url: https://raw.githubusercontent.com/Homebrew/install/master/install
