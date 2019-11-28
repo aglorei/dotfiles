@@ -2,7 +2,7 @@
 git_core:
   editor: nvim
 
-homebrew_brewfile: "{{ lookup('file', inventory_hostname + '/Brewfile') }}"
+homebrew_brewfile: "{{ lookup('file', inventory_hostname + '/Brewfile') | trim }}"
 homebrew_brews:
   - ansible
   - arp-scan
