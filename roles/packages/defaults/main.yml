@@ -1,4 +1,7 @@
 ---
 brewfile_dest: "{{ ansible_user_dir }}/.Brewfile"
 chunkwmrc_dest: "{{ ansible_user_dir }}/.chunkwmrc"
+pacman_packages:
+  - base
+  - base-devel
 skhdrc_dest: "{{ ansible_user_dir }}/.skhdrc"

@@ -1,3 +1,56 @@
 ---
 git_core:
   editor: nvim
+pacman_packages:
+  # groups
+  - base
+  - base-devel
+  # individual
+  - ansible
+  - apache
+  - arp-scan
+  - aws-cli
+  - bind-tools
+  - certbot
+  - cmake
+  - cronie
+  - docker
+  - fasd
+  - fd
+  - fzf
+  - gist
+  - git
+  - gnuplot
+  - grub
+  - htop
+  - jq
+  - keybase
+  - kubectl
+  - lastpass-cli
+  - lsof
+  - maven
+  - neofetch
+  - neovim
+  - netdata
+  - nmap
+  - openssh
+  - p7zip
+  - packer
+  - postgresql
+  - python
+  - python-pipenv
+  - python-pynvim
+  - ripgrep
+  - rsync
+  - strongswan
+  - terraform
+  - tmux
+  - traceroute
+  - transmission-cli
+  - tree
+  - unzip
+  - vim
+  - wget
+  - whois
+  - wireshark-cli
+  - zsh
