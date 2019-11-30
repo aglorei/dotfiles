@@ -2,9 +2,3 @@
 pinentry_path:
   Archlinux: /usr/bin/pinentry-curses
   MacOSX: /usr/local/bin/pinentry-curses
-
-util_config_synchronize:
-  base16-shell: "{{ ansible_user_dir }}/.config/base16-shell"
-  fast-syntax-highlighting: "{{ ansible_user_dir }}/.fsh"
-  geometry: "{{ ansible_user_dir }}/.geometry"
-  oh-my-zsh: "{{ ansible_user_dir }}/.oh-my-zsh"

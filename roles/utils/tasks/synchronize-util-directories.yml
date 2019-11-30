@@ -1,12 +1,11 @@
 ---
 - name: Synchronize util directories
   synchronize:
-    src: "{{ config.key }}/"
-    dest: "{{ config.value }}/"
+    src: "{{ config['src'] }}/"
+    dest: "{{ config['dest'] }}/"
     checksum: yes
     recursive: yes
     times: no
-  loop: "{{ util_config_synchronize|dict2items }}"
+  loop: "{{ util_config_directories }}"
   loop_control:
     loop_var: config
-  register: synchronize_result
