@@ -31,7 +31,7 @@
     name: "{{ package.key }}"
     install_options: "{{ package.value }}"
     state: present
-  loop: "{{ homebrew['brews_with_options']|dict2items }}"
+  loop: "{{ homebrew['brews_with_options'] | dict2items }}"
   loop_control:
     loop_var: package
 

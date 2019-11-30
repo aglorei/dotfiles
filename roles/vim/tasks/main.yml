@@ -4,7 +4,7 @@
     path: "{{ config.value|dirname }}"
     mode: 0700
     state: directory
-  loop: "{{ vim_config_files|dict2items }}"
+  loop: "{{ vim_config_files | dict2items }}"
   loop_control:
     loop_var: config
 
@@ -13,7 +13,7 @@
     src: "{{ config.key }}"
     dest: "{{ config.value }}"
     mode: 0644
-  loop: "{{ vim_config_files|dict2items }}"
+  loop: "{{ vim_config_files | dict2items }}"
   loop_control:
     loop_var: config
 
