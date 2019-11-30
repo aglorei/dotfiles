@@ -1,7 +1,7 @@
 ---
 - name: Ensure vim config directories
   file:
-    path: "{{ config.value|dirname }}"
+    path: "{{ config.value | dirname }}"
     mode: 0700
     state: directory
   loop: "{{ vim_config_files | dict2items }}"
