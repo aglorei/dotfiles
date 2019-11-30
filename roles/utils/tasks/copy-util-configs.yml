@@ -1,39 +1,23 @@
 ---
 - name: Ensure util config file directories
   file:
-    path: "{{ config.value|dirname }}"
+    path: "{{ config['dest'] | dirname }}"
     mode: 0700
     state: directory
-  loop: "{{ util_config_files|dict2items }}"
+  loop: "{{ util_config_files }}"
   loop_control:
     loop_var: config
+  no_log: True
 
 - name: Copy util config files
   copy:
-    src: "{{ config.key }}"
-    dest: "{{ config.value }}"
+    content: "{{ config['content'] }}"
+    dest: "{{ config['dest'] }}"
     mode: 0644
-  loop: "{{ util_config_files|dict2items }}"
+  loop: "{{ util_config_files }}"
   loop_control:
     loop_var: config
-
-- name: Ensure util config template directories
-  file:
-    path: "{{ config.value|dirname }}"
-    mode: 0700
-    state: directory
-  loop: "{{ util_config_templates|dict2items }}"
-  loop_control:
-    loop_var: config
-
-- name: Copy util config templates
-  template:
-    src: "{{ config.key }}"
-    dest: "{{ config.value }}"
-    mode: 0644
-  loop: "{{ util_config_templates|dict2items }}"
-  loop_control:
-    loop_var: config
+  no_log: True
 
 - name: Configure ssh dotfiles
   block:
@@ -64,7 +48,7 @@
         content: "{{ keyfile.value }}"
         dest: "{{ ansible_user_dir }}/.ssh/{{ keyfile.key }}"
         mode: 0600
-      loop: "{{ ssh['private_keys'] |dict2items }}"
+      loop: "{{ ssh['private_keys'] | dict2items }}"
       loop_control:
         loop_var: keyfile
       no_log: True

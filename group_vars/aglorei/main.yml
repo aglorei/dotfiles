@@ -132,3 +132,13 @@ pacman_packages:
   - whois
   - wireshark-cli
   - zsh
+
+util_config_files:
+  - content: "{{ lookup('template', inventory_hostname + '/gpg-agent.conf') }}"
+    dest: "{{ ansible_user_dir }}/.gnupg/gpg-agent.conf"
+  - content: "{{ lookup('template', inventory_hostname + '/htoprc') }}"
+    dest: "{{ ansible_user_dir }}/.config/htop/htoprc"
+  - content: "{{ lookup('template', inventory_hostname + '/.tmux.conf') }}"
+    dest: "{{ ansible_user_dir }}/.tmux.conf"
+  - content: "{{ lookup('template', inventory_hostname + '/.zshrc') }}"
+    dest: "{{ ansible_user_dir }}/.zshrc"
