@@ -61,6 +61,6 @@
     checksum: yes
     recursive: yes
     times: no
-  loop: "{{ util_config_directories }}"
+  loop: "{{ util_config_dirs }}"
   loop_control:
     loop_var: config

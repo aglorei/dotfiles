@@ -133,7 +133,7 @@ pacman_packages:
   - wireshark-cli
   - zsh
 
-util_config_directories:
+util_config_dirs:
   - src: "{{ inventory_hostname }}/base16-shell"
     dest: "{{ ansible_user_dir }}/.config/base16-shell"
   - src: "{{ inventory_hostname }}/fast-syntax-highlighting"
