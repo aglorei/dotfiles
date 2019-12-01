@@ -1,3 +1,66 @@
 ---
-- import_tasks: copy-util-configs.yml
-- import_tasks: synchronize-util-directories.yml
+- name: Ensure util config file directories
+  file:
+    path: "{{ config['dest'] | dirname }}"
+    mode: 0700
+    state: directory
+  loop: "{{ util_config_files }}"
+  loop_control:
+    loop_var: config
+  no_log: True
+
+- name: Copy util config files
+  copy:
+    content: "{{ config['content'] }}"
+    dest: "{{ config['dest'] }}"
+    mode: 0644
+  loop: "{{ util_config_files }}"
+  loop_control:
+    loop_var: config
+  no_log: True
+
+- name: Configure ssh dotfiles
+  block:
+    - name: Ensure ssh directory
+      file:
+        path: "{{ ansible_user_dir }}/.ssh"
+        mode: 0700
+        state: directory
+
+    - name: Copy ssh config
+      copy:
+        content: "{{ ssh['config'] }}"
+        dest: "{{ ansible_user_dir }}/.ssh/config"
+        mode: 0644
+
+    - name: Copy ssh public keys
+      copy:
+        content: "{{ keyfile.value }}"
+        dest: "{{ ansible_user_dir }}/.ssh/{{ keyfile.key }}"
+        mode: 0644
+      loop: "{{ ssh['public_keys'] | dict2items }}"
+      loop_control:
+        loop_var: keyfile
+      no_log: True
+
+    - name: Copy ssh private keys
+      copy:
+        content: "{{ keyfile.value }}"
+        dest: "{{ ansible_user_dir }}/.ssh/{{ keyfile.key }}"
+        mode: 0600
+      loop: "{{ ssh['private_keys'] | dict2items }}"
+      loop_control:
+        loop_var: keyfile
+      no_log: True
+  when: ssh is defined
+
+- name: Synchronize util directories
+  synchronize:
+    src: "{{ config['src'] }}/"
+    dest: "{{ config['dest'] }}/"
+    checksum: yes
+    recursive: yes
+    times: no
+  loop: "{{ util_config_directories }}"
+  loop_control:
+    loop_var: config
