@@ -172,3 +172,7 @@ pacman_packages:
   - whois
   - wireshark-cli
   - zsh
+
+pinentry_path:
+  Archlinux: /usr/bin/pinentry-curses
+  MacOSX: /usr/local/bin/pinentry-curses

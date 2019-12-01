@@ -1,4 +1,0 @@
----
-pinentry_path:
-  Archlinux: /usr/bin/pinentry-curses
-  MacOSX: /usr/local/bin/pinentry-curses
