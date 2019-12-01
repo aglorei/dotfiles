@@ -1,5 +1,5 @@
 ---
-- name: Ensure util config file directories
+- name: Ensure config file directories
   file:
     path: "{{ config['dest'] | dirname }}"
     mode: 0700
@@ -9,7 +9,7 @@
     loop_var: config
   no_log: True
 
-- name: Copy util config files
+- name: Copy config files
   copy:
     content: "{{ config['content'] }}"
     dest: "{{ config['dest'] }}"
@@ -54,7 +54,7 @@
       no_log: True
   when: ssh is defined
 
-- name: Synchronize util directories
+- name: Synchronize directories
   synchronize:
     src: "{{ config['src'] }}/"
     dest: "{{ config['dest'] }}/"
