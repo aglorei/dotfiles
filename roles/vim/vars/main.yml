@@ -1,8 +1,4 @@
 ---
 dein:
   url: https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
-
-vim_bundles_directory: "{{ ansible_user_dir }}/.vim/bundles"
-vim_config_files:
-  init.vim: "{{ ansible_user_dir }}/.config/nvim/init.vim"
-  vimrc: "{{ ansible_user_dir }}/.vimrc"
+  bundles_dir: "{{ ansible_user_dir }}/.vim/bundles"
