@@ -4,7 +4,7 @@
     path: "{{ config['dest'] | dirname }}"
     mode: 0700
     state: directory
-  loop: "{{ util_config_files }}"
+  loop: "{{ config_files }}"
   loop_control:
     loop_var: config
   no_log: True
@@ -14,7 +14,7 @@
     content: "{{ config['content'] }}"
     dest: "{{ config['dest'] }}"
     mode: 0644
-  loop: "{{ util_config_files }}"
+  loop: "{{ config_files }}"
   loop_control:
     loop_var: config
   no_log: True
@@ -61,6 +61,6 @@
     checksum: yes
     recursive: yes
     times: no
-  loop: "{{ util_config_dirs }}"
+  loop: "{{ config_dirs }}"
   loop_control:
     loop_var: config

@@ -1,4 +1,27 @@
 ---
+config_dirs:
+  - src: "{{ inventory_hostname }}/base16-shell"
+    dest: "{{ ansible_user_dir }}/.config/base16-shell"
+  - src: "{{ inventory_hostname }}/fast-syntax-highlighting"
+    dest: "{{ ansible_user_dir }}/.fsh"
+  - src: "{{ inventory_hostname }}/geometry"
+    dest: "{{ ansible_user_dir }}/.geometry"
+  - src: "{{ inventory_hostname }}/oh-my-zsh"
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh"
+config_files:
+  - content: "{{ lookup('template', inventory_hostname + '/.tmux.conf') }}"
+    dest: "{{ ansible_user_dir }}/.tmux.conf"
+  - content: "{{ lookup('template', inventory_hostname + '/.vimrc') }}"
+    dest: "{{ ansible_user_dir }}/.vimrc"
+  - content: "{{ lookup('template', inventory_hostname + '/.zshrc') }}"
+    dest: "{{ ansible_user_dir }}/.zshrc"
+  - content: "{{ lookup('template', inventory_hostname + '/gpg-agent.conf') }}"
+    dest: "{{ ansible_user_dir }}/.gnupg/gpg-agent.conf"
+  - content: "{{ lookup('template', inventory_hostname + '/htoprc') }}"
+    dest: "{{ ansible_user_dir }}/.config/htop/htoprc"
+  - content: "{{ lookup('template', inventory_hostname + '/init.vim') }}"
+    dest: "{{ ansible_user_dir }}/.config/nvim/init.vim"
+
 git_core:
   editor: nvim
 
@@ -132,26 +155,3 @@ pacman_packages:
   - whois
   - wireshark-cli
   - zsh
-
-util_config_dirs:
-  - src: "{{ inventory_hostname }}/base16-shell"
-    dest: "{{ ansible_user_dir }}/.config/base16-shell"
-  - src: "{{ inventory_hostname }}/fast-syntax-highlighting"
-    dest: "{{ ansible_user_dir }}/.fsh"
-  - src: "{{ inventory_hostname }}/geometry"
-    dest: "{{ ansible_user_dir }}/.geometry"
-  - src: "{{ inventory_hostname }}/oh-my-zsh"
-    dest: "{{ ansible_user_dir }}/.oh-my-zsh"
-util_config_files:
-  - content: "{{ lookup('template', inventory_hostname + '/.tmux.conf') }}"
-    dest: "{{ ansible_user_dir }}/.tmux.conf"
-  - content: "{{ lookup('template', inventory_hostname + '/.vimrc') }}"
-    dest: "{{ ansible_user_dir }}/.vimrc"
-  - content: "{{ lookup('template', inventory_hostname + '/.zshrc') }}"
-    dest: "{{ ansible_user_dir }}/.zshrc"
-  - content: "{{ lookup('template', inventory_hostname + '/gpg-agent.conf') }}"
-    dest: "{{ ansible_user_dir }}/.gnupg/gpg-agent.conf"
-  - content: "{{ lookup('template', inventory_hostname + '/htoprc') }}"
-    dest: "{{ ansible_user_dir }}/.config/htop/htoprc"
-  - content: "{{ lookup('template', inventory_hostname + '/init.vim') }}"
-    dest: "{{ ansible_user_dir }}/.config/nvim/init.vim"
