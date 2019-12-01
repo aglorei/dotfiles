@@ -1,8 +1,0 @@
----
-- name: restart-chunkwm
-  shell: |
-    brew services restart chunkwm
-
-- name: restart-skhd
-  shell: |
-    brew services restart skhd

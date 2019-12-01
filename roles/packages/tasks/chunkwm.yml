@@ -1,7 +1,0 @@
----
-- name: Copy chunkwmrc
-  copy:
-    src: chunkwmrc
-    dest: "{{ chunkwmrc_dest }}"
-    mode: 0755
-  notify: restart-chunkwm

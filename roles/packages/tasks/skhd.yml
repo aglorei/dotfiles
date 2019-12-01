@@ -1,8 +1,0 @@
----
-- name: Copy skhdrc
-  copy:
-    src: skhdrc
-    dest: "{{ skhdrc_dest }}"
-    mode: 0644
-  notify: restart-skhd
-  register: skhdrc_copy
