@@ -28,12 +28,15 @@ unix_files:
   - content: "{{ lookup('template', inventory_hostname + '/gpg-agent.conf') }}"
     dest: "{{ ansible_user_dir }}/.gnupg/gpg-agent.conf"
     mode: "0644"
+    dir_mode: "0700"
   - content: "{{ lookup('template', inventory_hostname + '/htoprc') }}"
     dest: "{{ ansible_user_dir }}/.config/htop/htoprc"
     mode: "0644"
+    dir_mode: "0700"
   - content: "{{ lookup('template', inventory_hostname + '/init.vim') }}"
     dest: "{{ ansible_user_dir }}/.config/nvim/init.vim"
     mode: "0644"
+    dir_mode: "0700"
 vault_files: "{{ vault_files }}"
 
 git:
