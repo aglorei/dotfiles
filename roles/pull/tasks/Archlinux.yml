@@ -1,12 +1,4 @@
 ---
-- name: Install pacman dependencies
-  pacman:
-    name: "{{ pacman['packages'] }}"
-    update_cache: yes
-    state: latest
-  become: yes
-  notify: start-cronie
-
 - name: Add ansible-pull to root crontab
   cron:
     name: "dotfiles"

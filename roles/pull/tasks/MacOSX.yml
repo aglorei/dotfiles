@@ -1,9 +1,4 @@
 ---
-- name: Install homebrew dependencies
-  homebrew:
-    name: "{{ homebrew['brews'] }}"
-    state: present
-
 - name: Ensure logfile path with correct ownership
   file:
     path: "{{ logfile }}"

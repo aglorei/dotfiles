@@ -4,11 +4,3 @@ logfile: /var/log/dotfiles.log
 repo_url: git://github.com/aglorei/dotfiles.git
 schedule: '*/15 * * * *'
 workdir: /tmp/dotfiles
-
-homebrew:
-  brews:
-    - ansible
-pacman:
-  packages:
-    - ansible
-    - cronie

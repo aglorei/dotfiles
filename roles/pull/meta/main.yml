@@ -1,0 +1,10 @@
+---
+dependencies:
+  - role: packages
+    vars:
+      homebrew_brews:
+        - ansible
+      pacman_packages:
+        - ansible
+        - cronie
+    notify: start-cronie
