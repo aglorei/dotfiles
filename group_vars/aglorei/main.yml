@@ -42,7 +42,6 @@ git:
   # set all vaulted variables in subgroups
   user: "{{ vault_git_user }}"
 
-homebrew_brewfile: "{{ lookup('template', inventory_hostname + '/.Brewfile') }}"
 homebrew_brews:
   - ansible
   - arp-scan

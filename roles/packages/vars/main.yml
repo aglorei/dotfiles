@@ -1,7 +1,6 @@
 ---
 homebrew_brewfile_dest: "{{ ansible_user_dir }}/.Brewfile"
 homebrew:
-  url: https://raw.githubusercontent.com/Homebrew/install/master/install
   brews: "{{ homebrew_brews }}"
   brews_with_options: "{{ homebrew_brews_with_options }}"
   casks: "{{ homebrew_casks }}"
