@@ -1,3 +1,0 @@
----
-gitconfig_dest: "{{ ansible_user_dir }}/.gitconfig"
-gitignore_global_dest: "{{ ansible_user_dir }}/.gitignore_global"

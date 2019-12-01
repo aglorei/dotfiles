@@ -3,5 +3,4 @@
   roles:
     - common
     - dein
-    - git
     - packages
