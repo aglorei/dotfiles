@@ -6,12 +6,3 @@
     job: "su -l {{ ansible_user_id }} -c '{{ cron_command }}' >>{{ logfile }} 2>&1"
     user: root
   become: yes
-
-- name: Create logrotate entry for dotfiles.log
-  template:
-    src: logrotate.j2
-    dest: /etc/logrotate.d/dotfiles
-    owner: root
-    group: root
-    mode: 0644
-  become: yes

@@ -8,3 +8,36 @@ dependencies:
         - ansible
         - cronie
     notify: start-cronie
+
+  - role: common
+    vars:
+      config_files:
+        - content: "{{ lookup('template', 'logrotate.j2') }}"
+          dest: "/etc/logrotate.d/dotfiles"
+          mode: "0644"
+          dir_mode: "0755"
+      config_dirs: []
+    become: yes
+    when: ansible_distribution == 'Archlinux'
+
+  - role: common
+    vars:
+      config_files:
+        - content: "{{ lookup('template', 'launchd.j2') }}"
+          dest: "{{ ansible_user_dir }}/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.plist"
+          mode: "0644"
+          dir_mode: "0755"
+      config_dirs: []
+    notify: start-launchd
+    when: ansible_distribution == 'MacOSX'
+
+  - role: common
+    vars:
+      config_files:
+        - content: "{{ lookup('template', 'newsyslog.j2') }}"
+          dest: "/etc/newsyslog.d/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.conf"
+          mode: "0644"
+          dir_mode: "0755"
+      config_dirs: []
+    become: yes
+    when: ansible_distribution == 'MacOSX'

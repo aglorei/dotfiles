@@ -2,11 +2,12 @@
 - name: Ensure config file directories
   file:
     path: "{{ config['dest'] | dirname }}"
-    mode: 0700
+    mode: "{{ config['dir_mode'] }}"
     state: directory
   loop: "{{ config_files }}"
   loop_control:
     loop_var: config
+  when: config['dir_mode'] is defined
   no_log: True
 
 - name: Copy config files
