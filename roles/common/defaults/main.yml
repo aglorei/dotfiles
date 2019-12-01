@@ -1,6 +1,3 @@
 ---
-config_files:
-  - content: |
-      alias ls='ls --color=auto'
-    dest: "{{ ansible_user_dir/.bashrc }}"
+config_files: []
 config_dirs: []
