@@ -1,3 +1,0 @@
----
-# set all vaulted variables in subgroup
-git_user: "{{ vault_git_user }}"

@@ -36,8 +36,11 @@ tool_files:
     dest: "{{ ansible_user_dir }}/.config/nvim/init.vim"
     mode: "0644"
 
-git_core:
-  editor: nvim
+git:
+  core:
+    editor: nvim
+  # set all vaulted variables in subgroups
+  user: "{{ vault_git_user }}"
 
 homebrew_brewfile: "{{ lookup('template', inventory_hostname + '/.Brewfile') }}"
 homebrew_brews:
