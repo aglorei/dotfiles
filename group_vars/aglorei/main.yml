@@ -8,23 +8,32 @@ config_dirs:
     dest: "{{ ansible_user_dir }}/.geometry"
   - src: "{{ inventory_hostname }}/oh-my-zsh"
     dest: "{{ ansible_user_dir }}/.oh-my-zsh"
-config_files:
+config_files: "{{ tool_files + vault_ssh_files }}"
+tool_files:
   - content: "{{ lookup('template', inventory_hostname + '/.gitconfig') }}"
     dest: "{{ ansible_user_dir }}/.gitconfig"
+    mode: "0644"
   - content: "{{ lookup('template', inventory_hostname + '/.gitignore_global') }}"
     dest: "{{ ansible_user_dir }}/.gitignore_global"
+    mode: "0644"
   - content: "{{ lookup('template', inventory_hostname + '/.tmux.conf') }}"
     dest: "{{ ansible_user_dir }}/.tmux.conf"
+    mode: "0644"
   - content: "{{ lookup('template', inventory_hostname + '/.vimrc') }}"
     dest: "{{ ansible_user_dir }}/.vimrc"
+    mode: "0644"
   - content: "{{ lookup('template', inventory_hostname + '/.zshrc') }}"
     dest: "{{ ansible_user_dir }}/.zshrc"
+    mode: "0644"
   - content: "{{ lookup('template', inventory_hostname + '/gpg-agent.conf') }}"
     dest: "{{ ansible_user_dir }}/.gnupg/gpg-agent.conf"
+    mode: "0644"
   - content: "{{ lookup('template', inventory_hostname + '/htoprc') }}"
     dest: "{{ ansible_user_dir }}/.config/htop/htoprc"
+    mode: "0644"
   - content: "{{ lookup('template', inventory_hostname + '/init.vim') }}"
     dest: "{{ ansible_user_dir }}/.config/nvim/init.vim"
+    mode: "0644"
 
 git_core:
   editor: nvim
