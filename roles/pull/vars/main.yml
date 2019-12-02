@@ -1,6 +1,2 @@
 ---
 cron_command: "{{ lookup('template', 'cron_command.j2') | trim }}"
-logfile: /var/log/dotfiles.log
-repo_url: git://github.com/aglorei/dotfiles.git
-schedule: '*/15 * * * *'
-workdir: /tmp/dotfiles

@@ -1,1 +1,1 @@
-ANSIBLE_FORCE_COLOR=1 ansible-pull -vv -d {{ workdir }} -U {{ repo_url }} --limit {{ inventory_hostname }}{% if inventory_hostname != 'localhost' %} --vault-id {{ vault_id }}@{{ vault_password_file }}{% endif %} --purge
+ANSIBLE_FORCE_COLOR=1 ansible-pull -vv -d {{ workdir }} -U {{ dotfiles_url }} --limit {{ inventory_hostname }}{% if inventory_hostname != 'localhost' %} --vault-id {{ vault_id }}@{{ vault_password_file }}{% endif %} --purge

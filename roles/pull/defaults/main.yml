@@ -1,0 +1,4 @@
+---
+dotfiles_url: git://github.com/aglorei/dotfiles.git
+logfile: /var/log/dotfiles.log
+workdir: /tmp/dotfiles
