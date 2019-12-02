@@ -1,7 +1,7 @@
 ---
 - name: Check vim base directory
   stat:
-    path: "{{ dein['bundles_dir'] }}"
+    path: "{{ dein_bundles_dir }}"
   register: dircheck
 
 - name: Install dein plugin manager
@@ -14,11 +14,11 @@
 
     - name: Download dein installer
       get_url:
-        url: "{{ dein['url'] }}"
+        url: "{{ dein_url }}"
         dest: "{{ temp_dir.path }}"
 
     - name: Execute dein installer
-      script: "{{ temp_dir.path }}/installer.sh {{ dein['bundles_dir'] }}"
+      script: "{{ temp_dir.path }}/installer.sh {{ dein_bundles_dir }}"
       register: dein_installer
 
     - name: Print dein installer stdout

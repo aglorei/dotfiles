@@ -1,4 +1,0 @@
----
-dein:
-  url: https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
-  bundles_dir: "{{ ansible_user_dir }}/.vim/bundles"
