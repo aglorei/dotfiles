@@ -1,3 +1,180 @@
 ---
-git_core:
-  editor: nvim
+config_dirs:
+  - src: "{{ inventory_hostname }}/base16-shell"
+    dest: "{{ ansible_user_dir }}/.config/base16-shell"
+  - src: "{{ inventory_hostname }}/fast-syntax-highlighting"
+    dest: "{{ ansible_user_dir }}/.fsh"
+  - src: "{{ inventory_hostname }}/geometry"
+    dest: "{{ ansible_user_dir }}/.geometry"
+  - src: "{{ inventory_hostname }}/oh-my-zsh"
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh"
+config_files: "{{ distribution_files + unix_files + vault_files }}"
+unix_files:
+  - content: "{{ lookup('template', inventory_hostname + '/.gitconfig') }}"
+    dest: "{{ ansible_user_dir }}/.gitconfig"
+    mode: "0644"
+  - content: "{{ lookup('template', inventory_hostname + '/.gitignore_global') }}"
+    dest: "{{ ansible_user_dir }}/.gitignore_global"
+    mode: "0644"
+  - content: "{{ lookup('template', inventory_hostname + '/.tmux.conf') }}"
+    dest: "{{ ansible_user_dir }}/.tmux.conf"
+    mode: "0644"
+  - content: "{{ lookup('template', inventory_hostname + '/.vimrc') }}"
+    dest: "{{ ansible_user_dir }}/.vimrc"
+    mode: "0644"
+  - content: "{{ lookup('template', inventory_hostname + '/.zshrc') }}"
+    dest: "{{ ansible_user_dir }}/.zshrc"
+    mode: "0644"
+  - content: "{{ lookup('template', inventory_hostname + '/gpg-agent.conf') }}"
+    dest: "{{ ansible_user_dir }}/.gnupg/gpg-agent.conf"
+    mode: "0644"
+    dir_mode: "0700"
+  - content: "{{ lookup('template', inventory_hostname + '/htoprc') }}"
+    dest: "{{ ansible_user_dir }}/.config/htop/htoprc"
+    mode: "0644"
+    dir_mode: "0700"
+  - content: "{{ lookup('template', inventory_hostname + '/init.vim') }}"
+    dest: "{{ ansible_user_dir }}/.config/nvim/init.vim"
+    mode: "0644"
+    dir_mode: "0700"
+vault_files: "{{ vault_files }}"
+
+git:
+  core:
+    editor: nvim
+  # set all vaulted variables in subgroups
+  user: "{{ vault_git_user }}"
+
+homebrew_brews:
+  - ansible
+  - arp-scan
+  - awscli
+  - azure-cli
+  - cmake
+  - cowsay
+  - koekeishiya/formulae/chunkwm
+  - doctl
+  - fasd
+  - fd
+  - figlet
+  - fortune
+  - fzf
+  - gist
+  - git
+  - gnupg
+  - helm
+  - htop
+  - ifstat
+  - jq
+  - kubernetes-cli
+  - lastpass-cli
+  - neofetch
+  - neovim
+  - netdata
+  - nmap
+  - node
+  - p7zip
+  - packer
+  - pipenv
+  - pipes-sh
+  - pstree
+  - python@2
+  - ripgrep
+  - telnet
+  - terraform
+  - tmux
+  - transmission-cli
+  - tree
+  - tty-clock
+  - vim
+  - wget
+  - wireshark
+  - zsh
+homebrew_brews_with_options:
+  koekeishiya/formulae/skhd:
+    - with-logging
+homebrew_casks:
+  - alfred
+  - authy
+  - brave-browser-beta
+  - docker
+  - firefox-beta
+  - font-mononoki-nerd-font-mono
+  - iterm2-beta
+  - java
+  - keybase
+  - mactex
+  - minikube
+  - rocket
+  - signal
+  - slack-beta
+  - spotify
+  - steam
+  - vlc
+homebrew_taps:
+  - homebrew/bundle
+  - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - homebrew/core
+  - homebrew/services
+  - koekeishiya/formulae
+
+pacman_packages:
+  # groups
+  - base
+  - base-devel
+  # individual
+  - ansible
+  - apache
+  - arp-scan
+  - aws-cli
+  - bind-tools
+  - certbot
+  - cmake
+  - cronie
+  - docker
+  - fasd
+  - fd
+  - fzf
+  - gist
+  - git
+  - gnuplot
+  - grub
+  - htop
+  - jq
+  - keybase
+  - kubectl
+  - lastpass-cli
+  - lsof
+  - maven
+  - neofetch
+  - neovim
+  - netdata
+  - nmap
+  - openssh
+  - p7zip
+  - packer
+  - postgresql
+  - python
+  - python-pipenv
+  - python-pynvim
+  - ripgrep
+  - rsync
+  - strongswan
+  - terraform
+  - tmux
+  - traceroute
+  - transmission-cli
+  - tree
+  - unzip
+  - vim
+  - wget
+  - whois
+  - wireshark-cli
+  - zsh
+
+pinentry_path:
+  Archlinux: /usr/bin/pinentry-curses
+  MacOSX: /usr/local/bin/pinentry-curses

@@ -1,0 +1,11 @@
+---
+distribution_files:
+  - content: "{{ lookup('template', inventory_hostname + '/.Brewfile') }}"
+    dest: "{{ ansible_user_dir }}/.Brewfile"
+    mode: "0644"
+  - content: "{{ lookup('template', inventory_hostname + '/.chunkwmrc') }}"
+    dest: "{{ ansible_user_dir }}/.chunkwmrc"
+    mode: "0755"
+  - content: "{{ lookup('template', inventory_hostname + '/.skhdrc') }}"
+    dest: "{{ ansible_user_dir }}/.skhdrc"
+    mode: "0644"

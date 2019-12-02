@@ -28,33 +28,6 @@ The [local.yml](local.yml) playbook can also be executed using [ansible-pull](ht
 ansible-playbook --limit localhost pull.yml
 ```
 
-### Configurations
-
-#### Mac
-
-* Creates a link to [Brewfile](roles/packages/files/Brewfile) in $HOME
-* Installs [chunkwm](https://github.com/koekeishiya/chunkwm)
-* Installs [skhd](https://github.com/koekeishiya/skhd)
-
-#### Utilities
-
-* Creates a link to [gpg-agent.conf](roles/utils/templates/gpg-agent.conf.j2) in $HOME/.gnupg/gpg-agent.conf
-* Creates a link to [htoprc](utils/roles/utils/files/htoprc) in $HOME/.config/htoprc
-* Creates a link to [tmux.conf](roles/utils/files/tmux.conf) in $HOME
-
-#### Shell
-* Installs [base16-shell](https://github.com/chriskempson/base16-shell)
-* Installs [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
-* Installs [geometry](https://github.com/geometry-zsh/geometry)
-* Installs [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* Creates a link to [zshrc](roles/utils/templates/zshrc.j2) in $HOME
-
-#### Vim
-
-* Installs [dein.vim](https://github.com/Shougo/dein) plugin manager
-* Creates a link to [vimrc](roles/vim/files/vimrc) in $HOME
-* Creates a link to [init.vim](roles/vim/files/init.vim) in $HOME/.config/nvim
-
 ## Advanced Usage
 
 ### Ansible Playbook
@@ -82,13 +55,3 @@ Similarly, you can again reverse the polarity of ansible's mode and setup a cron
 # optional --ask-become-pass
 ansible-playbook --limit $(hostname) pull.yml
 ```
-
-### Configurations
-
-#### Git
-* Configure [~/.gitconfig](roles/git/templates/gitconfig.j2)
-* Configure [~/.gitignore_global](roles/git/files/gitignore_global)
-
-#### SSH
-* Configure ~/.ssh/config
-* Configure ssh public and private keys with correct file modes

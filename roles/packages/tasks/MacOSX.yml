@@ -1,20 +1,21 @@
 ---
-- name: Copy Brewfile
-  copy:
-    src: Brewfile
-    dest: "{{ brewfile_dest }}"
-    mode: 0644
+- name: Check Brewfile exists
+  stat:
+    path: "{{ homebrew_brewfile_dest }}"
+  register: brewfile_check
 
 - name: Cleanup packages not found in manifest
-  shell: |
-    brew bundle cleanup --file={{ brewfile_dest }} --force
-  changed_when: "homebrew_cleanup.stdout_lines|length"
-  register: homebrew_cleanup
-
-- name: Print homebrew cleanup stdout
-  debug:
-    var: homebrew_cleanup.stdout_lines
-    verbosity: 2
+  block:
+    - name: Execute homebrew cleanup
+      shell: |
+        brew bundle cleanup --file={{ homebrew_brewfile_dest }} --force
+      changed_when: "homebrew_cleanup.stdout_lines | length"
+      register: homebrew_cleanup
+    - name: Print homebrew cleanup stdout
+      debug:
+        var: homebrew_cleanup.stdout_lines
+        verbosity: 2
+  when: brewfile_check.stat.exists == True
 
 - name: Tap external repositories
   homebrew_tap:
@@ -31,7 +32,7 @@
     name: "{{ package.key }}"
     install_options: "{{ package.value }}"
     state: present
-  loop: "{{ homebrew['brews_with_options']|dict2items }}"
+  loop: "{{ homebrew['brews_with_options'] | dict2items }}"
   loop_control:
     loop_var: package
 
@@ -49,6 +50,3 @@
 - name: Update homebrew cask and upgrade all packages
   homebrew_cask:
     upgrade_all: true
-
-- include_tasks: chunkwm.yml
-- include_tasks: skhd.yml

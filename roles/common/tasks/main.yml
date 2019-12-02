@@ -1,0 +1,32 @@
+---
+- name: Ensure config file directories
+  file:
+    path: "{{ config['dest'] | dirname }}"
+    mode: "{{ config['dir_mode'] }}"
+    state: directory
+  loop: "{{ config_files }}"
+  loop_control:
+    loop_var: config
+  when: config['dir_mode'] is defined
+  no_log: True
+
+- name: Copy config files
+  copy:
+    content: "{{ config['content'] }}"
+    dest: "{{ config['dest'] }}"
+    mode: "{{ config['mode'] }}"
+  loop: "{{ config_files }}"
+  loop_control:
+    loop_var: config
+  no_log: True
+
+- name: Synchronize directories
+  synchronize:
+    src: "{{ config['src'] }}/"
+    dest: "{{ config['dest'] }}/"
+    checksum: yes
+    recursive: yes
+    times: no
+  loop: "{{ config_dirs }}"
+  loop_control:
+    loop_var: config

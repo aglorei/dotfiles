@@ -1,0 +1,28 @@
+---
+- name: Check vim base directory
+  stat:
+    path: "{{ dein_bundles_dir }}"
+  register: dircheck
+
+- name: Install dein plugin manager
+  block:
+    - name: Create temporary build directory
+      tempfile:
+        state: directory
+        suffix: build
+      register: temp_dir
+
+    - name: Download dein installer
+      get_url:
+        url: "{{ dein_url }}"
+        dest: "{{ temp_dir.path }}"
+
+    - name: Execute dein installer
+      script: "{{ temp_dir.path }}/installer.sh {{ dein_bundles_dir }}"
+      register: dein_installer
+
+    - name: Print dein installer stdout
+      debug:
+        var: dein_installer.stdout_lines
+        verbosity: 2
+  when: dircheck.stat.exists == False

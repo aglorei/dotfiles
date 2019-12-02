@@ -1,7 +1,6 @@
 ---
 - hosts: workstation:localhost
   roles:
-    - git
+    - common
+    - dein
     - packages
-    - utils
-    - vim
