@@ -4,3 +4,9 @@
     name: '*'
     state: latest
   become_user: "{{ ansible_user_id }}"
+
+- name: Install packages from manifest
+  yum:
+    name: "{{ yum['packages'] }}"
+    state: latest
+  become_user: "{{ ansible_user_id }}"
