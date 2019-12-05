@@ -1,11 +1,14 @@
 localhost             ansible_connection=local
 
+[aglorei-Archlinux]
+lithium               ansible_connection=local
+
 [aglorei-MacOSX]
 Tienlongs-MacBook-Pro ansible_connection=local
 S03122-MBPR           ansible_connection=local
 
-[aglorei-Archlinux]
-lithium               ansible_connection=local
+[aglorei-RedHat]
+pc-tpham-4            ansible_connection=local
 
 [aglorei-personal]
 lithium               ansible_connection=local
@@ -13,6 +16,7 @@ Tienlongs-MacBook-Pro ansible_connection=local
 
 [aglorei-work]
 S03122-MBPR           ansible_connection=local
+pc-tpham-4            ansible_connection=local
 
 [aglorei:children]
 aglorei-MacOSX
