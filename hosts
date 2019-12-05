@@ -19,8 +19,9 @@ S03122-MBPR           ansible_connection=local
 pc-tpham-4            ansible_connection=local
 
 [aglorei:children]
-aglorei-MacOSX
 aglorei-Archlinux
+aglorei-MacOSX
+aglorei-RedHat
 aglorei-personal
 aglorei-work
 
