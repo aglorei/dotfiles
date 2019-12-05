@@ -3,4 +3,4 @@
   yum:
     name: '*'
     state: latest
-  become: yes
+  become_user: "{{ ansible_user_id }}"
