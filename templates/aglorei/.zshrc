@@ -14,8 +14,7 @@ source "$HOME/.fsh/fast-syntax-highlighting.plugin.zsh"
 
 # geometry
 source "$HOME/.geometry/geometry.zsh"
-GEOMETRY_STATUS_COLOR="default"        # prompt symbol color
-GEOMETRY_STATUS_COLOR_HASH=true        # color status symbol based on hostname
+GEOMETRY_STATUS_SYMBOL_COLOR_HASH=true
 
 # python2 brew
 [ -d /usr/local/opt/python@2/bin ] && PATH="/usr/local/opt/python@2/bin:$PATH"
