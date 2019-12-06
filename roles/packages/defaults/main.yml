@@ -5,5 +5,3 @@ homebrew_casks: []
 homebrew_taps: []
 
 pacman_packages: []
-
-yum_packages: []

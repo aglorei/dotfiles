@@ -8,6 +8,3 @@ homebrew:
 
 pacman:
   packages: "{{ pacman_packages }}"
-
-yum:
-  packages: "{{ yum_packages }}"

@@ -179,10 +179,3 @@ pinentry_path:
   Archlinux: /usr/bin/pinentry-curses
   MacOSX: /usr/local/bin/pinentry-curses
   RedHat: /usr/bin/pinentry-curses
-
-yum_packages:
-  - git
-  - tmux
-  - tree
-  - vim
-  - zsh
