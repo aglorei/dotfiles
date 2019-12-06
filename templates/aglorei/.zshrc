@@ -13,12 +13,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 source "$HOME/.fsh/fast-syntax-highlighting.plugin.zsh"
 
 # geometry
-GEOMETRY_SYMBOL_PROMPT="ℷ"
-GEOMETRY_SYMBOL_RPROMPT="ℷ"
-GEOMETRY_SYMBOL_EXIT_VALUE="ℷ"
-PROMPT_GEOMETRY_COLORIZE_SYMBOL="true"
-GEOMETRY_PROMPT_PREFIX=""
-GEOMETRY_PROMPT_PLUGINS=(virtualenv exec_time git)
 source "$HOME/.geometry/geometry.zsh"
 
 # python2 brew
