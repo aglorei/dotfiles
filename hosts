@@ -14,16 +14,19 @@ pc-tpham-4            ansible_connection=local
 lithium               ansible_connection=local
 Tienlongs-MacBook-Pro ansible_connection=local
 
-[aglorei-work]
-pc-tpham-4            ansible_connection=local
+[aglorei-work-1]
 S03122-MBPR           ansible_connection=local
+
+[aglorei-work-2]
+pc-tpham-4            ansible_connection=local
 
 [aglorei:children]
 aglorei-Archlinux
 aglorei-MacOSX
 aglorei-RedHat
 aglorei-personal
-aglorei-work
+aglorei-work-1
+aglorei-work-2
 
 [workstation:children]
 aglorei
