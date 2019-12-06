@@ -13,6 +13,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 source "$HOME/.fsh/fast-syntax-highlighting.plugin.zsh"
 
 # geometry
+GEOMETRY_STATUS_COLOR="default"        # prompt symbol color
+GEOMETRY_STATUS_COLOR_HASH=true        # color status symbol based on hostname
 source "$HOME/.geometry/geometry.zsh"
 
 # python2 brew
