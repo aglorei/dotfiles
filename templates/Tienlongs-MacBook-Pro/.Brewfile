@@ -1,1 +1,1 @@
-../aglorei/.Brewfile
+../aglorei-MacOSX/.Brewfile
