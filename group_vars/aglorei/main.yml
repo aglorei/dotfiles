@@ -52,7 +52,7 @@ homebrew_brews:
   - azure-cli
   - cmake
   - cowsay
-  - koekeishiya/formulae/chunkwm
+  - koekeishiya/formulae/yabai
   - doctl
   - fasd
   - fd

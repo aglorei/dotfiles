@@ -94,10 +94,10 @@ brew "wget"
 brew "wireshark"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Tiling window manager for macOS based on plugin architecture
-brew "koekeishiya/formulae/chunkwm"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd", args: ["with-logging"]
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
 cask "alfred"
 cask "authy"
 cask "brave-browser-beta"
