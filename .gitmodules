@@ -4,9 +4,6 @@
 [submodule "roles/utils/files/oh-my-zsh"]
 	path = files/aglorei/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "roles/utils/files/fast-syntax-highlighting"]
-	path = files/aglorei/fast-syntax-highlighting
-	url = https://github.com/zdharma/fast-syntax-highlighting
 [submodule "files/aglorei/geometry"]
 	path = files/aglorei/geometry
 	url = https://github.com/geometry-zsh/geometry
