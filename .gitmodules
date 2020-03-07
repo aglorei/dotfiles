@@ -8,3 +8,6 @@
 	path = files/aglorei/geometry
 	url = https://github.com/geometry-zsh/geometry
 	branch = mnml
+[submodule "files/aglorei/zsh-syntax-highlighting"]
+	path = files/aglorei/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
