@@ -10,3 +10,4 @@
 [submodule "files/aglorei/geometry"]
 	path = files/aglorei/geometry
 	url = https://github.com/geometry-zsh/geometry.git
+	branch = main
