@@ -10,7 +10,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # fast-syntax-highlighting
-source "$HOME/.fsh/fast-syntax-highlighting.plugin.zsh"
+source "$HOME/.zsh/zsh-syntax-highlighting.zsh"
 
 # geometry
 source "$HOME/.geometry/geometry.zsh"

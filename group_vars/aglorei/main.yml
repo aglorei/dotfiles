@@ -2,8 +2,8 @@
 config_dirs:
   - src: "{{ inventory_hostname }}/base16-shell"
     dest: "{{ ansible_user_dir }}/.config/base16-shell"
-  - src: "{{ inventory_hostname }}/fast-syntax-highlighting"
-    dest: "{{ ansible_user_dir }}/.fsh"
+  - src: "{{ inventory_hostname }}/zsh-syntax-highlighting"
+    dest: "{{ ansible_user_dir }}/.zsh"
   - src: "{{ inventory_hostname }}/geometry"
     dest: "{{ ansible_user_dir }}/.geometry"
   - src: "{{ inventory_hostname }}/oh-my-zsh"
