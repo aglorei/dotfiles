@@ -9,9 +9,6 @@ source "$ZSH/oh-my-zsh.sh"
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# fast-syntax-highlighting
-source "$HOME/.zsh/zsh-syntax-highlighting.zsh"
-
 # geometry
 source "$HOME/.geometry/geometry.zsh"
 GEOMETRY_STATUS_SYMBOL_COLOR_HASH=true
@@ -59,3 +56,6 @@ alias fucking="sudo"
 
 # export GPG tty
 export GPG_TTY=$(tty)
+
+# zsh-syntax-highlighting
+source "$HOME/.zsh/zsh-syntax-highlighting.zsh"
