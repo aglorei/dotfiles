@@ -1,2 +1,2 @@
 ---
-vaulted_files: "{{ vault_files }}"
+vaulted_files: "{{ vault_vaulted_files }}"
