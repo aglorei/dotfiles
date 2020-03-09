@@ -8,7 +8,7 @@ config_dirs:
     dest: "{{ ansible_user_dir }}/.geometry"
   - src: "{{ inventory_hostname }}/oh-my-zsh"
     dest: "{{ ansible_user_dir }}/.oh-my-zsh"
-config_files: "{{ distribution_files + unix_files + vault_files }}"
+config_files: "{{ distribution_files + unix_files + vaulted_files }}"
 unix_files:
   - content: "{{ lookup('template', inventory_hostname + '/.gitconfig') }}"
     dest: "{{ ansible_user_dir }}/.gitconfig"
@@ -37,7 +37,6 @@ unix_files:
     dest: "{{ ansible_user_dir }}/.config/nvim/init.vim"
     mode: "0644"
     dir_mode: "0700"
-vault_files: "{{ vault_files }}"
 
 git:
   core:
