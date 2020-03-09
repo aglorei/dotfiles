@@ -1,0 +1,2 @@
+---
+vault_files: "{{ vault_files }}"

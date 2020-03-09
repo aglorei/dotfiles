@@ -37,7 +37,6 @@ unix_files:
     dest: "{{ ansible_user_dir }}/.config/nvim/init.vim"
     mode: "0644"
     dir_mode: "0700"
-vault_files: "{{ vault_files }}"
 
 git:
   core:
