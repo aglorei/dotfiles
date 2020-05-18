@@ -52,7 +52,7 @@ brew "lastpass-cli"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Distributed real-time performance and health monitoring
+# Diagnose infrastructure problems with metrics, visualizations & alarms
 brew "netdata", restart_service: true
 # Port scanning utility for large networks
 brew "nmap"
@@ -74,7 +74,7 @@ brew "pstree"
 brew "python@2"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# User interface to the TELNET protocol (built from macOS Sierra sources)
+# User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
 brew "terraform"
