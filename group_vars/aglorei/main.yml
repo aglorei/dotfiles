@@ -44,6 +44,51 @@ git:
   # set all vaulted variables in subgroups
   user: "{{ vault_git_user }}"
 
+apt_packages:
+  - ansible
+  - apache2-utils
+  - arp-scan
+  - awscli
+  - certbot
+  - cmake
+  - docker
+  - dnsutils
+  - fasd
+  - fd-find
+  - fzf
+  - gist
+  - git
+  - gnuplot
+  - grub-pc
+  - htop
+  - jq
+  - lastpass-cli
+  - lsof
+  - maven
+  - neofetch
+  - neovim
+  - netdata
+  - nmap
+  - p7zip
+  - packer
+  - pipenv
+  - postgresql
+  - python-pynvim
+  - python3
+  - ripgrep
+  - rsync
+  - strongswan
+  - tmux
+  - traceroute
+  - transmission-cli
+  - tree
+  - unzip
+  - vim
+  - wget
+  - whois
+  - wireshark
+  - zsh
+
 homebrew_brews:
   - ansible
   - arp-scan

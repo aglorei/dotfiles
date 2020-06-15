@@ -1,0 +1,29 @@
+---
+- name: Run the equivalent of "pacman -Syu"
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  become: yes
+
+- name: Install packages from manifest
+  apt:
+    name: "{{ apt['packages'] }}"
+    state: latest
+    update_cache: yes
+    cache_valid_time: 3600
+  become: yes
+
+- name: Upgrade all packages to the latest version
+  apt:
+    upgrade: dist
+  become: yes
+
+- name: Remove useless packages from the cache
+  apt:
+    autoclean: yes
+  become: yes
+
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes
+  become: yes
