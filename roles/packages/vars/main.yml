@@ -1,4 +1,7 @@
 ---
+apt:
+  packages: "{{ apt_packages }}"
+
 homebrew_brewfile_dest: "{{ ansible_user_dir }}/.Brewfile"
 homebrew:
   brews: "{{ homebrew_brews }}"
