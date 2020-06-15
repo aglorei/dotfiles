@@ -100,6 +100,7 @@ brew "koekeishiya/formulae/skhd", args: ["with-logging"]
 brew "koekeishiya/formulae/yabai"
 cask "alfred"
 cask "authy"
+cask "barrier"
 cask "brave-browser-beta"
 cask "docker"
 cask "firefox-beta"

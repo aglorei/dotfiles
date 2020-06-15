@@ -141,6 +141,7 @@ homebrew_brews_with_options:
 homebrew_casks:
   - alfred
   - authy
+  - barrier
   - brave-browser-beta
   - docker
   - firefox-beta
