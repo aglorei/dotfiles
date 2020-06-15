@@ -1,10 +1,4 @@
 ---
-- name: Run the equivalent of "pacman -Syu"
-  pacman:
-    update_cache: yes
-    upgrade: yes
-  become: yes
-
 - name: Install packages from manifest
   apt:
     name: "{{ apt['packages'] }}"
