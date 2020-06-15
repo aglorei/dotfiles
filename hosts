@@ -10,7 +10,11 @@ Tienlongs-MacBook-Pro ansible_connection=local
 [aglorei-RedHat]
 pc-tpham-4            ansible_connection=local
 
+[aglorei-Ubuntu]
+DESKTOP-G4P1V9I       ansible_connection=local
+
 [aglorei-personal]
+DESKTOP-G4P1V9I       ansible_connection=local
 lithium               ansible_connection=local
 Tienlongs-MacBook-Pro ansible_connection=local
 
@@ -24,6 +28,7 @@ pc-tpham-4            ansible_connection=local
 aglorei-Archlinux
 aglorei-MacOSX
 aglorei-RedHat
+aglorei-Ubuntu
 aglorei-personal
 aglorei-work-1
 aglorei-work-2
