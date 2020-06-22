@@ -144,7 +144,6 @@ homebrew_casks:
   - barrier
   - brave-browser-beta
   - docker
-  - firefox-beta
   - font-mononoki-nerd-font-mono
   - iterm2-beta
   - java
