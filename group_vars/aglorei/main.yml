@@ -123,7 +123,6 @@ homebrew_brews:
   - pipenv
   - pipes-sh
   - pstree
-  - python@2
   - ripgrep
   - telnet
   - terraform

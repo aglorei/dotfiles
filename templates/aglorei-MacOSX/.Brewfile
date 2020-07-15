@@ -70,8 +70,6 @@ brew "pipes-sh"
 brew "postgresql"
 # Show ps output as a tree
 brew "pstree"
-# Interpreted, interactive, object-oriented programming language
-brew "python@2"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # User interface to the TELNET protocol
