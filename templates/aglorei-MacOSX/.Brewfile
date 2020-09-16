@@ -89,7 +89,7 @@ brew "vim"
 # Internet file retriever
 brew "wget"
 # Graphical network analyzer and capture tool
-brew "wireshark"
+brew "wireshark", link: false
 # UNIX shell (command interpreter)
 brew "zsh"
 # Simple hotkey-daemon for macOS.
