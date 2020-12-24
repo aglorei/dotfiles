@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lint Ansible project
-        uses: ansible/ansible-lint-action@master
+        uses: ansible/ansible-lint-action@v4.1.0
         with:
           override-deps: |
             ansible==2.10.4
