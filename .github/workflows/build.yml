@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ansible/ansible-lint-action@v4
+      - uses: ansible/ansible-lint-action@v4.1.0
         with:
           override-deps: |
             ansible==2.10.4
