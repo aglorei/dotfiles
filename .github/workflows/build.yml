@@ -1,0 +1,11 @@
+---
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  hello_world:
+    name: Hello World!
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello world!
