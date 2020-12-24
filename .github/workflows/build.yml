@@ -4,8 +4,13 @@ name: build
 on: [push, pull_request]
 
 jobs:
-  hello_world:
-    name: Hello World!
+  ansible-lint:
+    name: Lint Ansible project
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello world!
+      - name: Lint Ansible project
+        uses: ansible/ansible-lint-action@master
+        with:
+          override-deps: |
+            ansible==2.10.4
+            ansible-lint==4.3.7
