@@ -10,6 +10,5 @@ distribution_files:
     dest: "{{ ansible_user_dir }}/.skhdrc"
     mode: "0644"
 
-ansible_user_id_safe: "{{ ansible_user_id | regex_replace('\\.', '') }}"
 launch_agent_dir: "{{ ansible_user_dir }}/Library/LaunchAgents"
 newsyslog_dir: /etc/newsyslog.d
