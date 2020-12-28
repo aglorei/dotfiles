@@ -33,7 +33,7 @@ dependencies:
           mode: "0644"
           dir_mode: "0755"
       config_dirs: []
-    become: yes
+    become: true
     when: ansible_distribution == "Archlinux"
 
   - role: common
@@ -55,5 +55,5 @@ dependencies:
           mode: "0644"
           dir_mode: "0755"
       config_dirs: []
-    become: yes
+    become: true
     when: ansible_distribution == "MacOSX"
