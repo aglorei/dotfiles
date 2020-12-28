@@ -8,5 +8,5 @@
 - name: Install packages from manifest
   pacman:
     name: "{{ pacman['packages'] }}"
-    state: latest
+    state: latest # noqa 403
   become: yes

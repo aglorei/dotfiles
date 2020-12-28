@@ -2,9 +2,8 @@
 - name: Install packages from manifest
   apt:
     name: "{{ apt['packages'] }}"
-    state: latest
+    state: latest # noqa 403
     update_cache: yes
-    cache_valid_time: 3600
   become: yes
 
 - name: Upgrade all packages to the latest version

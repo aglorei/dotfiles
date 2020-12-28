@@ -20,18 +20,18 @@
 - name: Tap external repositories
   homebrew_tap:
     name: "{{ homebrew['taps'] }}"
-    state: latest
+    state: latest # noqa 403
 
 - name: Install homebrew packages
   homebrew:
     name: "{{ homebrew['brews'] }}"
-    state: latest
+    state: latest # noqa 403
 
 - name: Install homebrew packages with options
   homebrew:
     name: "{{ package.key }}"
     install_options: "{{ package.value }}"
-    state: latest
+    state: latest # noqa 403
   loop: "{{ homebrew['brews_with_options'] | dict2items }}"
   loop_control:
     loop_var: package
@@ -40,7 +40,7 @@
   homebrew_cask:
     name: "{{ homebrew['casks'] }}"
     greedy: yes
-    state: latest
+    state: latest # noqa 403
 
 - name: Update homebrew and upgrade all packages
   homebrew:
