@@ -20,18 +20,18 @@
 - name: Tap external repositories
   homebrew_tap:
     name: "{{ homebrew['taps'] }}"
-    state: present
+    state: latest
 
 - name: Install homebrew packages
   homebrew:
     name: "{{ homebrew['brews'] }}"
-    state: present
+    state: latest
 
 - name: Install homebrew packages with options
   homebrew:
     name: "{{ package.key }}"
     install_options: "{{ package.value }}"
-    state: present
+    state: latest
   loop: "{{ homebrew['brews_with_options'] | dict2items }}"
   loop_control:
     loop_var: package
@@ -40,7 +40,7 @@
   homebrew_cask:
     name: "{{ homebrew['casks'] }}"
     greedy: yes
-    state: present
+    state: latest
 
 - name: Update homebrew and upgrade all packages
   homebrew:
