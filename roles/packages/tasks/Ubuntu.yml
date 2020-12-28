@@ -3,20 +3,20 @@
   apt:
     name: "{{ apt['packages'] }}"
     state: latest # noqa 403
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
 
 - name: Upgrade all packages to the latest version
   apt:
     upgrade: dist
-  become: yes
+  become: true
 
 - name: Remove useless packages from the cache
   apt:
-    autoclean: yes
-  become: yes
+    autoclean: true
+  become: true
 
 - name: Remove dependencies that are no longer required
   apt:
-    autoremove: yes
-  become: yes
+    autoremove: true
+  become: true

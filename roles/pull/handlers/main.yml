@@ -2,9 +2,9 @@
 - name: start-cronie
   systemd:
     name: cronie
-    enabled: yes
+    enabled: true
     state: started
-  become: yes
+  become: true
 
 - name: start-launchd
   launchd:

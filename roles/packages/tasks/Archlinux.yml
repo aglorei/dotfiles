@@ -1,12 +1,12 @@
 ---
 - name: Run the equivalent of "pacman -Syu"
   pacman:
-    update_cache: yes
-    upgrade: yes
-  become: yes
+    update_cache: true
+    upgrade: true
+  become: true
 
 - name: Install packages from manifest
   pacman:
     name: "{{ pacman['packages'] }}"
     state: latest # noqa 403
-  become: yes
+  become: true
