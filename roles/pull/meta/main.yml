@@ -40,7 +40,7 @@ dependencies:
     vars:
       config_files:
         - content: "{{ lookup('template', 'launchd.j2') }}"
-          dest: "{{ ansible_user_dir }}/Library/LaunchAgents/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.plist"
+          dest: "{{ launch_agent_dir }}/com.{{ ansible_user_id_safe }}.dotfiles.plist"
           mode: "0644"
           dir_mode: "0755"
       config_dirs: []
@@ -51,7 +51,7 @@ dependencies:
     vars:
       config_files:
         - content: "{{ lookup('template', 'newsyslog.j2') }}"
-          dest: "/etc/newsyslog.d/com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles.conf"
+          dest: "{{ newsyslog_dir }}/com.{{ ansible_user_id_safe }}.dotfiles.conf"
           mode: "0644"
           dir_mode: "0755"
       config_dirs: []
