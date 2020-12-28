@@ -1,4 +1,20 @@
 ---
+galaxy_info:
+  author: aglorei
+  description: Set up dotfiles playlist as an ansible-pull cron
+  license: MIT
+  min_ansible_version: 2.10.4
+  platforms:
+    - name: Archlinux
+      versions:
+        - all
+    - name: MacOSX
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - 20.04
+
 dependencies:
   - role: packages
     vars:
