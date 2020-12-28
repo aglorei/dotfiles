@@ -1,8 +1,9 @@
 ---
 - name: Add ansible-pull to root crontab
   cron:
-    name: "dotfiles"
+    name: dotfiles
     minute: "*/15"
-    job: "su -l {{ ansible_user_id }} -c '{{ cron_command }}' >>{{ logfile }} 2>&1"
+    job: >-
+      su -l {{ ansible_user_id }} -c '{{ cron_command }}' >>{{ logfile }} 2>&1
     user: root
   become: yes

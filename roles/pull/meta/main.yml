@@ -34,7 +34,7 @@ dependencies:
           dir_mode: "0755"
       config_dirs: []
     become: yes
-    when: ansible_distribution == 'Archlinux'
+    when: ansible_distribution == "Archlinux"
 
   - role: common
     vars:
@@ -45,7 +45,7 @@ dependencies:
           dir_mode: "0755"
       config_dirs: []
     notify: start-launchd
-    when: ansible_distribution == 'MacOSX'
+    when: ansible_distribution == "MacOSX"
 
   - role: common
     vars:
@@ -56,4 +56,4 @@ dependencies:
           dir_mode: "0755"
       config_dirs: []
     become: yes
-    when: ansible_distribution == 'MacOSX'
+    when: ansible_distribution == "MacOSX"
