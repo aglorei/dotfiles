@@ -1,6 +1,9 @@
 ---
 extends: default
 
+ignore: |
+  *_vault.yml
+
 rules:
   line-length:
     allow-non-breakable-inline-mappings: true
