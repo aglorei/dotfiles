@@ -15,23 +15,23 @@
       debug:
         var: homebrew_cleanup.stdout_lines
         verbosity: 2
-  when: brewfile_check.stat.exists == True
+  when: brewfile_check.stat.exists
 
 - name: Tap external repositories
   homebrew_tap:
     name: "{{ homebrew['taps'] }}"
-    state: present
+    state: latest  # noqa 403
 
 - name: Install homebrew packages
   homebrew:
     name: "{{ homebrew['brews'] }}"
-    state: present
+    state: latest  # noqa 403
 
 - name: Install homebrew packages with options
   homebrew:
     name: "{{ package.key }}"
     install_options: "{{ package.value }}"
-    state: present
+    state: latest  # noqa 403
   loop: "{{ homebrew['brews_with_options'] | dict2items }}"
   loop_control:
     loop_var: package
@@ -39,13 +39,13 @@
 - name: Install homebrew casks
   homebrew_cask:
     name: "{{ homebrew['casks'] }}"
-    greedy: yes
-    state: present
+    greedy: true
+    state: latest  # noqa 403
 
 - name: Update homebrew and upgrade all packages
   homebrew:
-    update_homebrew: yes
-    upgrade_all: yes
+    update_homebrew: true
+    upgrade_all: true
 
 - name: Update homebrew cask and upgrade all packages
   homebrew_cask:

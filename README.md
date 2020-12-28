@@ -1,5 +1,6 @@
 # Dotfiles
 
+![build](https://github.com/aglorei/dotfiles/workflows/build/badge.svg)
 ![Warm...warmer...disco.](screenshot.png)
 
 ## Purpose

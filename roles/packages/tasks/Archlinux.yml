@@ -1,21 +1,12 @@
 ---
-# TODO waiting for https://github.com/ansible/ansible/issues/63077
-- name: Replace deficient pacman module with 2.8.6 version
-  get_url:
-    url: https://raw.githubusercontent.com/ansible/ansible/v2.8.6/lib/ansible/modules/packaging/os/pacman.py
-    dest: /usr/lib/python3.8/site-packages/ansible/modules/packaging/os/pacman.py
-    backup: yes
-  become: yes
-  when: ansible_version.full is version_compare('2.8', '>')
-
 - name: Run the equivalent of "pacman -Syu"
   pacman:
-    update_cache: yes
-    upgrade: yes
-  become: yes
+    update_cache: true
+    upgrade: true
+  become: true
 
 - name: Install packages from manifest
   pacman:
     name: "{{ pacman['packages'] }}"
-    state: latest
-  become: yes
+    state: latest  # noqa 403
+  become: true

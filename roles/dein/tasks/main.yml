@@ -25,4 +25,4 @@
       debug:
         var: dein_installer.stdout_lines
         verbosity: 2
-  when: dircheck.stat.exists == False
+  when: not dircheck.stat.exists

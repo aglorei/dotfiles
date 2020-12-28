@@ -8,7 +8,7 @@
   loop_control:
     loop_var: config
   when: config['dir_mode'] is defined
-  no_log: True
+  no_log: true
 
 - name: Copy config files
   copy:
@@ -18,15 +18,15 @@
   loop: "{{ config_files }}"
   loop_control:
     loop_var: config
-  no_log: True
+  no_log: true
 
 - name: Synchronize directories
   synchronize:
     src: "{{ config['src'] }}/"
     dest: "{{ config['dest'] }}/"
-    checksum: yes
-    recursive: yes
-    times: no
+    checksum: true
+    recursive: true
+    times: false
   loop: "{{ config_dirs }}"
   loop_control:
     loop_var: config

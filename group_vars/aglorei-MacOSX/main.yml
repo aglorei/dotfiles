@@ -9,3 +9,6 @@ distribution_files:
   - content: "{{ lookup('template', inventory_hostname + '/.skhdrc') }}"
     dest: "{{ ansible_user_dir }}/.skhdrc"
     mode: "0644"
+
+launch_agent_dir: "{{ ansible_user_dir }}/Library/LaunchAgents"
+newsyslog_dir: /etc/newsyslog.d
