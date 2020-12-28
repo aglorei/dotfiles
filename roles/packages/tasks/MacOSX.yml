@@ -39,13 +39,13 @@
 - name: Install homebrew casks
   homebrew_cask:
     name: "{{ homebrew['casks'] }}"
-    greedy: yes
+    greedy: true
     state: latest # noqa 403
 
 - name: Update homebrew and upgrade all packages
   homebrew:
-    update_homebrew: yes
-    upgrade_all: yes
+    update_homebrew: true
+    upgrade_all: true
 
 - name: Update homebrew cask and upgrade all packages
   homebrew_cask:
