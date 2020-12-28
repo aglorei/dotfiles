@@ -2,7 +2,7 @@
 - name: Install packages from manifest
   apt:
     name: "{{ apt['packages'] }}"
-    state: latest # noqa 403
+    state: latest  # noqa 403
     update_cache: true
   become: true
 
