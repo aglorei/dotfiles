@@ -4,26 +4,26 @@ localhost
 aglorei
 
 [aglorei:children]
-aglorei-Archlinux
-aglorei-MacOSX
-aglorei-Ubuntu
-aglorei-personal
-aglorei-work-1
+aglorei_Archlinux
+aglorei_MacOSX
+aglorei_Ubuntu
+aglorei_personal
+aglorei_work_1
 
-[aglorei-Archlinux]
+[aglorei_Archlinux]
 lithium
 
-[aglorei-MacOSX]
+[aglorei_MacOSX]
 S03122-MBPR
 Tienlongs-MacBook-Pro
 
-[aglorei-Ubuntu]
+[aglorei_Ubuntu]
 aglorei-pc-1
 
-[aglorei-personal]
+[aglorei_personal]
 aglorei-pc-1
 lithium
 Tienlongs-MacBook-Pro
 
-[aglorei-work-1]
+[aglorei_work_1]
 S03122-MBPR
