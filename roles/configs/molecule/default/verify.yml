@@ -15,4 +15,4 @@
       register: testfile_stat
     - name: Assert test file mode
       assert:
-        that: testfile_stat.stat.mode == 0644
+        that: testfile_stat.stat.mode == "0644"
