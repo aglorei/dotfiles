@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include configs"
+    - name: Include "configs" role
       include_role:
-        name: "configs"
+        name: configs

@@ -9,6 +9,8 @@ platforms:
     capabilities:
       - SYS_ADMIN
     command: "/usr/sbin/init"
+    groups:
+      - group_red
     tmpfs:
       - /run
       - /tmp
@@ -20,5 +22,14 @@ provisioner:
   config_options:
     defaults:
       stdout_callback: debug
+  inventory:
+    group_vars:
+      group_red:
+        config_files:
+          - content: |
+              RED
+            dest: "{{ ansible_user_dir }}/color"
+            mode: 0644
+  log: true
 verifier:
   name: ansible
