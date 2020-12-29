@@ -5,7 +5,14 @@
     - name: Read test file
       slurp:
         src: "{{ ansible_user_dir }}/color"
-      register: testfile
+      register: testfile_slurp
     - name: Assert test file content
       assert:
-        that: (testfile.content | b64decode | trim) == "RED"
+        that: (testfile_slurp.content | b64decode | trim) == "RED"
+    - name: Read test file mode
+      stat:
+        path: "{{ ansible_user_dir }}/color"
+      register: testfile_stat
+    - name: Assert test file mode
+      assert:
+        that: testfile_stat.stat.mode == 0644

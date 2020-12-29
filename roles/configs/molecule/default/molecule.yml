@@ -11,6 +11,7 @@ platforms:
     command: "/usr/sbin/init"
     groups:
       - group_red
+      - group_dog
     tmpfs:
       - /run
       - /tmp
@@ -29,7 +30,13 @@ provisioner:
           - content: |
               RED
             dest: "{{ ansible_user_dir }}/color"
-            mode: 0644
+            mode: "0644"
+      group_dog:
+        config_files:
+          - content: |
+              DOG
+            dest: "{{ ansible_user_dir }}/animal"
+            mode: "0400"
   log: true
 verifier:
   name: ansible
