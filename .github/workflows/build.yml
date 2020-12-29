@@ -34,9 +34,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          for role in $(ls -d roles/*/)
+          for role in $(ls -d $PWD/roles/*/)
           do
-            pushd $role
+            cd $role
               [ -d molecule ] && molecule test --all
             popd
           done
