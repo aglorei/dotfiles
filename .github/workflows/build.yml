@@ -13,7 +13,7 @@ jobs:
   ansible-lint:
     container:
       image: quay.io/ansible/toolset:main
-    name: Lint Ansible project
+    name: Lint Ansible files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,3 +26,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: yamllint --format github --strict .
+  molecule:
+    container:
+      image: quay.io/ansible/toolset:main
+    name: Test Ansible roles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          for role in $(ls -d roles/*/)
+          do
+            pushd $role
+              [ -d molecule ] && molecule test --all
+            popd
+          done
