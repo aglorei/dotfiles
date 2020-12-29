@@ -1,7 +1,18 @@
 localhost
 
-[workstation:children]
-aglorei
+#############################################
+## Hosts where ansible_connection is local ##
+#############################################
+
+[workstation]
+aglorei-pc-1
+lithium
+S03122-MBPR
+Tienlongs-MacBook-Pro
+
+############################
+## AGLOREI configurations ##
+############################
 
 [aglorei:children]
 aglorei_Archlinux
