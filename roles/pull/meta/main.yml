@@ -7,13 +7,13 @@ galaxy_info:
   platforms:
     - name: Archlinux
       versions:
-        - all
+        - any
     - name: MacOSX
       versions:
-        - all
+        - 10.15
     - name: Ubuntu
       versions:
-        - 20.04
+        - focal
 
 dependencies:
   - role: packages
@@ -24,7 +24,6 @@ dependencies:
         - ansible
         - cronie
     notify: start-cronie
-
   - role: common
     vars:
       config_files:
@@ -35,7 +34,6 @@ dependencies:
       config_dirs: []
     become: true
     when: ansible_distribution == "Archlinux"
-
   - role: common
     vars:
       config_files:
@@ -46,7 +44,6 @@ dependencies:
       config_dirs: []
     notify: start-launchd
     when: ansible_distribution == "MacOSX"
-
   - role: common
     vars:
       config_files:
