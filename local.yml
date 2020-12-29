@@ -1,6 +1,6 @@
 ---
 - hosts: workstation:localhost
   roles:
-    - common
+    - configurations
     - dein
     - packages

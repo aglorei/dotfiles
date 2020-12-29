@@ -24,7 +24,7 @@ dependencies:
         - ansible
         - cronie
     notify: start-cronie
-  - role: common
+  - role: configurations
     vars:
       config_files:
         - content: "{{ lookup('template', 'logrotate.j2') }}"
@@ -34,7 +34,7 @@ dependencies:
       config_dirs: []
     become: true
     when: ansible_distribution == "Archlinux"
-  - role: common
+  - role: configurations
     vars:
       config_files:
         - content: "{{ lookup('template', 'launchd.j2') }}"
@@ -44,7 +44,7 @@ dependencies:
       config_dirs: []
     notify: start-launchd
     when: ansible_distribution == "MacOSX"
-  - role: common
+  - role: configurations
     vars:
       config_files:
         - content: "{{ lookup('template', 'newsyslog.j2') }}"
