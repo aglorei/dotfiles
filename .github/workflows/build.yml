@@ -34,9 +34,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          for role in $(ls -d $PWD/roles/*/)
+          for role in $(ls -d $GITHUB_WORKSPACE/roles/*/)
           do
             cd $role
-              [ -d molecule ] && molecule test --all
-            popd
+            [ -d molecule ] && molecule test --all
           done
