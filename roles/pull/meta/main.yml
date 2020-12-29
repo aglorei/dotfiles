@@ -3,7 +3,7 @@ galaxy_info:
   author: aglorei
   description: Set up dotfiles playlist as an ansible-pull cron
   license: MIT
-  min_ansible_version: 2.10.4
+  min_ansible_version: 2.10.3
   platforms:
     - name: Archlinux
       versions:
