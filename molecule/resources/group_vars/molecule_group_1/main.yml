@@ -1,15 +1,15 @@
 ---
 config_dirs:
   - src: >-
-      {{ inventory_hostname }}/sync1
+      molecule_group_1/sync1
     dest: >-
       {{ ansible_user_dir }}/sync1
   - src: >-
-      {{ inventory_hostname }}/sync2
+      molecule_group_1/sync2
     dest: >-
       {{ ansible_user_dir }}/sync2
   - src: >-
-      {{ inventory_hostname }}/sync3
+      molecule_group_1/sync3
     dest: >-
       {{ ansible_user_dir }}/sync3
 
