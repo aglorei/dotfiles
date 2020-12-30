@@ -2,8 +2,19 @@
 - name: Prepare
   hosts: all
   tasks:
-    - name: Install rsync
-      apt:
-        name: rsync
-        state: present
-        update_cache: true
+    - name: Prepare Archlinux instances
+      block:
+        - name: Install rsync
+          pacman:
+            name: rsync
+            state: present
+            update_cache: true
+      when: ansible_distribution == "Archlinux"
+    - name: Prepare Ubuntu instances
+      block:
+        - name: Install rsync
+          apt:
+            name: rsync
+            state: present
+            update_cache: true
+      when: ansible_distribution == "Ubuntu"
