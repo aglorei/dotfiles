@@ -4,14 +4,6 @@
   tasks:
     - name: Assert config file copies
       include_tasks: verify_files.yml
-      loop:
-        - content: |
-            DOG
-          dest: "{{ ansible_user_dir }}/animal"
-          mode: "0400"
-        - content: |
-            RED
-          dest: "{{ ansible_user_dir }}/src/color"
-          mode: "0644"
+      loop: "{{ config_files }}"
       loop_control:
-        loop_var: testfile
+        loop_var: config

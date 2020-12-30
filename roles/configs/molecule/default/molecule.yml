@@ -10,7 +10,7 @@ platforms:
       - SYS_ADMIN
     command: "/usr/sbin/init"
     groups:
-      - group_test_1
+      - molecule_group_1
     tmpfs:
       - /run
       - /tmp
@@ -23,18 +23,8 @@ provisioner:
     defaults:
       stdout_callback: debug
   inventory:
-    group_vars:
-      group_test_1:
-        config_files:
-          - content: |
-              DOG
-            dest: "{{ ansible_user_dir }}/animal"
-            mode: "0400"
-          - content: |
-              RED
-            dest: "{{ ansible_user_dir }}/src/color"
-            mode: "0644"
-            dir_mode: "0700"
+    links:
+      group_vars: ../../../../group_vars
   log: true
 verifier:
   name: ansible

@@ -1,18 +1,18 @@
 ---
-- name: Read test file
+- name: Read config file
   slurp:
-    src: "{{ testfile.dest }}"
-  register: testfile_slurp
+    src: "{{ config.dest }}"
+  register: config_slurp
 
-- name: Assert test file content
+- name: Assert config file content
   assert:
-    that: (testfile_slurp.content | b64decode) == testfile.content
+    that: (config_slurp.content | b64decode) == config.content
 
-- name: Read test file mode
+- name: Read config file mode
   stat:
-    path: "{{ testfile.dest }}"
-  register: testfile_stat
+    path: "{{ config.dest }}"
+  register: config_stat
 
-- name: Assert test file mode
+- name: Assert config file mode
   assert:
-    that: testfile_stat.stat.mode == testfile.mode
+    that: config_stat.stat.mode == config.mode
