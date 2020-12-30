@@ -1,0 +1,14 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Assert file copies
+      include_tasks: verify_configs_files.yml
+      loop: "{{ config_files }}"
+      loop_control:
+        loop_var: config
+    - name: Assert directory synchronization
+      include_tasks: verify_configs_directories.yml
+      loop: "{{ config_dirs }}"
+      loop_control:
+        loop_var: config

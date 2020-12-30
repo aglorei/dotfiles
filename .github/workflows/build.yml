@@ -12,17 +12,26 @@ on:  # yamllint disable-line rule:truthy
 jobs:
   ansible-lint:
     container:
-      image: quay.io/ansible/toolset:0.2
-    name: Lint Ansible project
+      image: quay.io/ansible/toolset:main
+    name: Lint Ansible files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: ansible-lint --force-color
   yamllint:
     container:
-      image: quay.io/ansible/toolset:0.2
+      image: quay.io/ansible/toolset:main
     name: Lint YAML files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: yamllint --format github --strict .
+  molecule:
+    container:
+      image: quay.io/ansible/toolset:main
+    name: Test Ansible roles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          molecule test --all

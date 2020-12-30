@@ -3,17 +3,17 @@ galaxy_info:
   author: aglorei
   description: Set up dotfiles playlist as an ansible-pull cron
   license: MIT
-  min_ansible_version: 2.10.4
+  min_ansible_version: 2.10.3
   platforms:
     - name: Archlinux
       versions:
-        - all
+        - any
     - name: MacOSX
       versions:
-        - all
+        - 10.15
     - name: Ubuntu
       versions:
-        - 20.04
+        - focal
 
 dependencies:
   - role: packages
@@ -24,8 +24,7 @@ dependencies:
         - ansible
         - cronie
     notify: start-cronie
-
-  - role: common
+  - role: configs
     vars:
       config_files:
         - content: "{{ lookup('template', 'logrotate.j2') }}"
@@ -35,8 +34,7 @@ dependencies:
       config_dirs: []
     become: true
     when: ansible_distribution == "Archlinux"
-
-  - role: common
+  - role: configs
     vars:
       config_files:
         - content: "{{ lookup('template', 'launchd.j2') }}"
@@ -46,8 +44,7 @@ dependencies:
       config_dirs: []
     notify: start-launchd
     when: ansible_distribution == "MacOSX"
-
-  - role: common
+  - role: configs
     vars:
       config_files:
         - content: "{{ lookup('template', 'newsyslog.j2') }}"

@@ -1,29 +1,40 @@
-localhost             ansible_connection=local
+localhost
 
-[aglorei-Archlinux]
-lithium               ansible_connection=local
+#############################################
+## Hosts where ansible_connection is local ##
+#############################################
 
-[aglorei-MacOSX]
-S03122-MBPR           ansible_connection=local
-Tienlongs-MacBook-Pro ansible_connection=local
+[workstation]
+aglorei-pc-1
+lithium
+S03122-MBPR
+Tienlongs-MacBook-Pro
 
-[aglorei-Ubuntu]
-aglorei-pc-1       ansible_connection=local
-
-[aglorei-personal]
-aglorei-pc-1       ansible_connection=local
-lithium               ansible_connection=local
-Tienlongs-MacBook-Pro ansible_connection=local
-
-[aglorei-work-1]
-S03122-MBPR           ansible_connection=local
+############################
+## AGLOREI configurations ##
+############################
 
 [aglorei:children]
-aglorei-Archlinux
-aglorei-MacOSX
-aglorei-Ubuntu
-aglorei-personal
-aglorei-work-1
+aglorei_Archlinux
+aglorei_MacOSX
+aglorei_Ubuntu
+aglorei_personal
+aglorei_work_1
 
-[workstation:children]
-aglorei
+[aglorei_Archlinux]
+lithium
+
+[aglorei_MacOSX]
+S03122-MBPR
+Tienlongs-MacBook-Pro
+
+[aglorei_Ubuntu]
+aglorei-pc-1
+
+[aglorei_personal]
+aglorei-pc-1
+lithium
+Tienlongs-MacBook-Pro
+
+[aglorei_work_1]
+S03122-MBPR
