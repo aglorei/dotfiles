@@ -10,8 +10,7 @@ platforms:
       - SYS_ADMIN
     command: "/usr/sbin/init"
     groups:
-      - group_red
-      - group_dog
+      - group_test_1
     tmpfs:
       - /run
       - /tmp
@@ -25,18 +24,17 @@ provisioner:
       stdout_callback: debug
   inventory:
     group_vars:
-      group_red:
-        config_files:
-          - content: |
-              RED
-            dest: "{{ ansible_user_dir }}/color"
-            mode: "0644"
-      group_dog:
+      group_test_1:
         config_files:
           - content: |
               DOG
             dest: "{{ ansible_user_dir }}/animal"
             mode: "0400"
+          - content: |
+              RED
+            dest: "{{ ansible_user_dir }}/src/color"
+            mode: "0644"
+            dir_mode: "0700"
   log: true
 verifier:
   name: ansible

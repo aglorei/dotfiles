@@ -2,17 +2,16 @@
 - name: Verify
   hosts: all
   tasks:
-    - name: Read test file
-      slurp:
-        src: "{{ ansible_user_dir }}/color"
-      register: testfile_slurp
-    - name: Assert test file content
-      assert:
-        that: (testfile_slurp.content | b64decode | trim) == "RED"
-    - name: Read test file mode
-      stat:
-        path: "{{ ansible_user_dir }}/color"
-      register: testfile_stat
-    - name: Assert test file mode
-      assert:
-        that: testfile_stat.stat.mode == "0644"
+    - name: Assert config file copies
+      include_tasks: verify_files.yml
+      loop:
+        - content: |
+            DOG
+          dest: "{{ ansible_user_dir }}/animal"
+          mode: "0400"
+        - content: |
+            RED
+          dest: "{{ ansible_user_dir }}/src/color"
+          mode: "0644"
+      loop_control:
+        loop_var: testfile
