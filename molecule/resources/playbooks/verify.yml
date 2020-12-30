@@ -2,8 +2,8 @@
 - name: Verify
   hosts: all
   tasks:
-    - name: Assert config file copies and dirname creation
-      include_tasks: verify_files.yml
+    - name: Assert file copies and directory synchronization
+      include_tasks: verify_configs.yml
       loop: "{{ config_files }}"
       loop_control:
         loop_var: config

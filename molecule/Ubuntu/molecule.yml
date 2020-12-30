@@ -28,5 +28,6 @@ provisioner:
   log: true
   playbooks:
     converge: ../resources/playbooks/converge.yml
+    verify: ../resources/playbooks/verify.yml
 verifier:
   name: ansible
