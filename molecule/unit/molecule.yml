@@ -40,7 +40,7 @@ provisioner:
       group_vars: ../resources/group_vars
   log: true
   playbooks:
-    converge: ../resources/playbooks/converge.yml
-    verify: ../resources/playbooks/verify.yml
+    converge: ../resources/converge.yml
+    verify: ../resources/verify.yml
 verifier:
   name: ansible
