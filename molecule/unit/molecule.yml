@@ -37,10 +37,9 @@ provisioner:
       stdout_callback: debug
   inventory:
     links:
-      group_vars: ../resources/group_vars
+      group_vars: group_vars
   log: true
   playbooks:
-    converge: ../resources/converge.yml
     verify: ../resources/verify.yml
 verifier:
   name: ansible
