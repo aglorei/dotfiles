@@ -7,7 +7,7 @@
         name: configs
     - name: Include "dein" role
       include_role:
-        name: configs
+        name: dein
     - name: Include "packages" role
       include_role:
-        name: configs
+        name: packages
