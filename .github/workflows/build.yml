@@ -34,8 +34,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          for role in $(ls -d $GITHUB_WORKSPACE/roles/*/)
-          do
-            cd $role
-            [ ! -d molecule ] || molecule -v test --all
-          done
+          molecule -v test --all
