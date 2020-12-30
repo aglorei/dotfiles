@@ -5,3 +5,6 @@
     - name: Include "configs" role
       include_role:
         name: configs
+    - name: Include "dein" role
+      include_role:
+        name: dein

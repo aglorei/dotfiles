@@ -4,17 +4,21 @@
   tasks:
     - name: Prepare Archlinux instances
       block:
-        - name: Install rsync
+        - name: Install requisite packages
           pacman:
-            name: rsync
+            name:
+              - git
+              - rsync
             state: present
             update_cache: true
       when: ansible_distribution == "Archlinux"
     - name: Prepare Ubuntu instances
       block:
-        - name: Install rsync
+        - name: Install requisite packages
           apt:
-            name: rsync
+            name:
+              - git
+              - rsync
             state: present
             update_cache: true
       when: ansible_distribution == "Ubuntu"

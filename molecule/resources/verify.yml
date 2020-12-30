@@ -2,13 +2,19 @@
 - name: Verify
   hosts: all
   tasks:
-    - name: Assert file copies
-      include_tasks: verify_configs_files.yml
+    - name: Assert configuration file copies
+      include_tasks: verify_files.yml
       loop: "{{ config_files }}"
       loop_control:
         loop_var: config
-    - name: Assert directory synchronization
-      include_tasks: verify_configs_directories.yml
+    - name: Assert configuration directory synchronization
+      include_tasks: verify_directories.yml
       loop: "{{ config_dirs }}"
+      loop_control:
+        loop_var: config
+    - name: Assert dein plugin installation
+      include_tasks: verify_directories.yml
+      loop:
+        - dest: "{{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim"
       loop_control:
         loop_var: config

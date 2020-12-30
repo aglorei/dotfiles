@@ -18,11 +18,11 @@
         dest: "{{ temp_dir.path }}"
 
     - name: Execute dein installer
-      script: "{{ temp_dir.path }}/installer.sh {{ dein_bundles_dir }}"
+      command: "sh {{ temp_dir.path }}/installer.sh {{ dein_bundles_dir }}"
       register: dein_installer
-
-    - name: Print dein installer stdout
-      debug:
-        var: dein_installer.stdout_lines
-        verbosity: 2
+  always:
+    - name: Cleanup temporary build directory
+      file:
+        path: "{{ temp_dir.path }}"
+        state: absent
   when: not dircheck.stat.exists
