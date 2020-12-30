@@ -1,4 +1,18 @@
 ---
+config_dirs:
+  - src: >-
+      {{ inventory_hostname }}/sync1
+    dest: >-
+      {{ ansible_user_dir }}/sync1
+  - src: >-
+      {{ inventory_hostname }}/sync2
+    dest: >-
+      {{ ansible_user_dir }}/sync2
+  - src: >-
+      {{ inventory_hostname }}/sync3
+    dest: >-
+      {{ ansible_user_dir }}/sync3
+
 config_files:
   - content: |
       TEST CONTENT A
