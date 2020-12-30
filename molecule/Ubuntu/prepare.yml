@@ -1,0 +1,9 @@
+---
+- name: Prepare
+  hosts: all
+  tasks:
+    - name: Install rsync
+      apt:
+        name: rsync
+        state: present
+        update_cache: true
