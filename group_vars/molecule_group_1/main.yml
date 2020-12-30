@@ -1,11 +1,16 @@
 ---
 config_files:
   - content: |
-      DOG
-    dest: "{{ ansible_user_dir }}/animal"
+      TEST CONTENT A
+    dest: "{{ ansible_user_dir }}/a"
     mode: "0400"
   - content: |
-      RED
-    dest: "{{ ansible_user_dir }}/src/color"
+      TEST CONTENT B
+    dest: "{{ ansible_user_dir }}/1/b"
     mode: "0644"
     dir_mode: "0700"
+  - content: |
+      TEST CONTENT C
+    dest: "{{ ansible_user_dir }}/1/2/c"
+    mode: "0644"
+    dir_mode: "0755"

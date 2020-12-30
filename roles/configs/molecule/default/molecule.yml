@@ -4,7 +4,7 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: ubuntu_focal
+  - name: molecule-ubuntu-focal
     image: geerlingguy/docker-ubuntu2004-ansible
     capabilities:
       - SYS_ADMIN

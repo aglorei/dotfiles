@@ -1,4 +1,15 @@
 ---
+- name: Read config directory mode
+  stat:
+    path: "{{ config.dest | dirname }}"
+  register: configdir_stat
+  when: config.dir_mode is defined
+
+- name: Assert config directory mode
+  assert:
+    that: configdir_stat.stat.mode == config.dir_mode
+  when: config.dir_mode is defined
+
 - name: Read config file
   slurp:
     src: "{{ config.dest }}"
