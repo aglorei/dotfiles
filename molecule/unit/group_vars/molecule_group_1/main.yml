@@ -16,17 +16,26 @@ config_dirs:
 config_files:
   - content: |
       TEST CONTENT A
-    dest: "{{ ansible_user_dir }}/a"
+    dest: >-
+      {{ ansible_user_dir }}/a
     mode: "0400"
   - content: |
       TEST CONTENT B
-    dest: "{{ ansible_user_dir }}/1/b"
+    dest: >-
+      {{ ansible_user_dir }}/1/b
     mode: "0644"
     dir_mode: "0700"
   - content: |
       TEST CONTENT C
-    dest: "{{ ansible_user_dir }}/1/2/c"
+    dest: >-
+      {{ ansible_user_dir }}/1/2/c
     mode: "0644"
     dir_mode: "0755"
+  - content: >-
+      {{ lookup('template', 'molecule_group_1/init.vim') }}
+    dest: >-
+      {{ ansible_user_dir }}/.config/nvim/init.vim
+    mode: "0644"
+    dir_mode: "0700"
 
 dein_bundles_dir: "{{ ansible_user_dir }}/.vim/bundles"

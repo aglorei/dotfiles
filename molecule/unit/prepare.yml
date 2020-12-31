@@ -9,6 +9,7 @@
             name:
               - git
               - rsync
+              - sudo
             state: present
             update_cache: true
       when: ansible_distribution == "Archlinux"
