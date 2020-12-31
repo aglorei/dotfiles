@@ -1,13 +1,7 @@
 ---
 - name: Configure files, directories, and packages
   hosts: workstation:localhost
-  tasks:
-    - name: Include "configs" role
-      include_role:
-        name: configs
-    - name: Include "dein" role
-      include_role:
-        name: dein
-    - name: Include "packages" role
-      include_role:
-        name: packages
+  roles:
+    - configs
+    - dein
+    - packages
