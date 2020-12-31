@@ -39,7 +39,5 @@ provisioner:
     links:
       group_vars: group_vars
   log: true
-  playbooks:
-    verify: ../resources/verify.yml
 verifier:
   name: ansible

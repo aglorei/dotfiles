@@ -7,12 +7,10 @@ set runtimepath+={{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim
 if dein#load_state('{{ dein_bundles_dir }}')
   call dein#begin('{{ dein_bundles_dir }}')
 
-  " Let dein manage dein.
-  call dein#add('{{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim')
-
   " Add or remove your plugins here like this:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
+  {% for plugin in dein_plugins %}
+    call dein#add('{{ plugin.dest }}')
+  {% endfor %}
 
   " Required:
   call dein#end()

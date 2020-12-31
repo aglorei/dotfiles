@@ -39,3 +39,10 @@ config_files:
     dir_mode: "0700"
 
 dein_bundles_dir: "{{ ansible_user_dir }}/.vim/bundles"
+dein_plugins:
+  - dest: >-
+      {{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim
+  - dest: >-
+      {{ dein_bundles_dir }}/repos/github.com/ctrlpvim/ctrlp.vim
+  - dest: >-
+      {{ dein_bundles_dir }}/repos/github.com/tpope/vim-surround
