@@ -3,5 +3,5 @@
   hosts: workstation:localhost
   roles:
     - configs
-    - dein
     - packages
+    - dein
