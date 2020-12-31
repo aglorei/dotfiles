@@ -11,12 +11,10 @@
         state: directory
         suffix: build
       register: temp_dir
-
     - name: Download dein installer
       get_url:
         url: "{{ dein_url }}"
         dest: "{{ temp_dir.path }}"
-
     - name: Execute dein installer
       command: "sh {{ temp_dir.path }}/installer.sh {{ dein_bundles_dir }}"
       register: dein_installer
