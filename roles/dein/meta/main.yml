@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: aglorei
-  description: Synchronize configuration files and directories
+  description: Install dein plugin manager for vim and configure plugins
   license: MIT
   min_ansible_version: 2.10.3
   platforms:
@@ -15,5 +15,5 @@ galaxy_info:
       versions:
         - focal
 
-allow_duplicates: true
+allow_duplicates: false
 dependencies: []

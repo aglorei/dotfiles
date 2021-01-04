@@ -29,9 +29,9 @@ jobs:
   molecule:
     container:
       image: quay.io/ansible/toolset:main
-    name: Test Ansible roles
+    name: Unit test Ansible roles
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
-          molecule test --all
+          molecule test --scenario-name mock --parallel

@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: aglorei
-  description: Set up dotfiles playlist as an ansible-pull cron
+  description: Set up dotfiles playbook as an ansible-pull cron
   license: MIT
   min_ansible_version: 2.10.3
   platforms:
@@ -11,18 +11,17 @@ galaxy_info:
     - name: MacOSX
       versions:
         - 10.15
-    - name: Ubuntu
-      versions:
-        - focal
 
+allow_duplicates: false
 dependencies:
   - role: packages
     vars:
-      homebrew_brews:
-        - ansible
-      pacman_packages:
-        - ansible
-        - cronie
+      os_packages:
+        homebrew:
+          - ansible
+        pacman:
+          - ansible
+          - cronie
     notify: start-cronie
   - role: configs
     vars:

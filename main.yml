@@ -1,0 +1,12 @@
+---
+- name: Synchronize configuration files and directories
+  import_role:
+    name: configs
+
+- name: Install operating system packages
+  import_role:
+    name: packages
+
+- name: Install dein plugin manager for vim and configure plugins
+  import_role:
+    name: dein

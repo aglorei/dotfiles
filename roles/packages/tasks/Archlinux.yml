@@ -5,8 +5,8 @@
     upgrade: true
   become: true
 
-- name: Install packages from manifest
+- name: Install pacman packages
   pacman:
-    name: "{{ pacman['packages'] }}"
+    name: "{{ os_packages[ansible_facts.pkg_mgr] }}"
     state: latest  # noqa 403
   become: true

@@ -1,9 +1,10 @@
 ---
-apt_packages: []
+homebrew_brewfile_dest: "{{ ansible_user_dir }}/.Brewfile"
 
-homebrew_brews: []
-homebrew_brews_with_options: {}
-homebrew_casks: []
-homebrew_taps: []
-
-pacman_packages: []
+os_packages:
+  apt: []
+  homebrew: []
+  homebrew_with_options: {}
+  homebrew_casks: []
+  homebrew_taps: []
+  pacman: []
