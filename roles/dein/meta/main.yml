@@ -15,6 +15,7 @@ galaxy_info:
       versions:
         - focal
 
+allow_duplicates: false
 dependencies:
   - role: packages
     vars:
