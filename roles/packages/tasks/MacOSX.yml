@@ -32,7 +32,7 @@
     name: "{{ package.key }}"
     install_options: "{{ package.value }}"
     state: latest  # noqa 403
-  loop: "{{ os_packages.homebrew_brews_with_options | dict2items }}"
+  loop: "{{ os_packages.homebrew_with_options | dict2items }}"
   loop_control:
     loop_var: package
 
