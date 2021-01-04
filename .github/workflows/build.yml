@@ -34,4 +34,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          molecule test --scenario-name unit --parallel
+          molecule test --scenario-name mock --parallel

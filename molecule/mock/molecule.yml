@@ -40,6 +40,6 @@ provisioner:
       group_vars: ../../group_vars
   log: true
   playbooks:
-    converge: ../../unit.yml
+    converge: ../../mock.yml
 verifier:
   name: ansible
