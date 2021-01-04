@@ -11,9 +11,6 @@ galaxy_info:
     - name: MacOSX
       versions:
         - 10.15
-    - name: Ubuntu
-      versions:
-        - focal
 
 dependencies:
   - role: packages
