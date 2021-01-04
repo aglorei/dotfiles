@@ -43,6 +43,8 @@ dein_plugins:
   - dest: >-
       {{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim
   - dest: >-
-      {{ dein_bundles_dir }}/repos/github.com/ctrlpvim/ctrlp.vim
+      {{ dein_bundles_dir }}/repos/github.com/Raimondi/delimitMate
+  - dest: >-
+      {{ dein_bundles_dir }}/repos/github.com/tpope/vim-commentary
   - dest: >-
       {{ dein_bundles_dir }}/repos/github.com/tpope/vim-surround
