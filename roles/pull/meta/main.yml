@@ -18,11 +18,12 @@ galaxy_info:
 dependencies:
   - role: packages
     vars:
-      homebrew_brews:
-        - ansible
-      pacman_packages:
-        - ansible
-        - cronie
+      os_packages:
+        homebrew:
+          - ansible
+        pacman:
+          - ansible
+          - cronie
     notify: start-cronie
   - role: configs
     vars:

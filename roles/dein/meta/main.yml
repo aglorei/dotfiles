@@ -18,9 +18,10 @@ galaxy_info:
 dependencies:
   - role: packages
     vars:
-      apt_packages:
-        - neovim
-      homebrew_brews:
-        - neovim
-      pacman_packages:
-        - neovim
+      os_packages:
+        apt:
+          - neovim
+        homebrew:
+          - neovim
+        pacman:
+          - neovim

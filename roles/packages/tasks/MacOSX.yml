@@ -19,12 +19,12 @@
 
 - name: Tap external repositories
   homebrew_tap:
-    name: "{{ homebrew.taps }}"
+    name: "{{ os_packages.homebrew_taps }}"
     state: latest  # noqa 403
 
 - name: Install homebrew packages
   homebrew:
-    name: "{{ homebrew.brews }}"
+    name: "{{ os_packages[ansible_facts.pkg_mgr] }}"
     state: latest  # noqa 403
 
 - name: Install homebrew packages with options
@@ -32,13 +32,13 @@
     name: "{{ package.key }}"
     install_options: "{{ package.value }}"
     state: latest  # noqa 403
-  loop: "{{ homebrew.brews_with_options | dict2items }}"
+  loop: "{{ os_packages.homebrew_brews_with_options | dict2items }}"
   loop_control:
     loop_var: package
 
 - name: Install homebrew casks
   homebrew_cask:
-    name: "{{ homebrew.casks }}"
+    name: "{{ os_packages.homebrew_casks }}"
     greedy: true
     state: latest  # noqa 403
 

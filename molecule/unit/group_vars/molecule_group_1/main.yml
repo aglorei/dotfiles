@@ -48,3 +48,17 @@ dein_plugins:
       {{ dein_bundles_dir }}/repos/github.com/tpope/vim-commentary
   - dest: >-
       {{ dein_bundles_dir }}/repos/github.com/tpope/vim-surround
+
+os_packages:
+  apt:
+    - htop
+    - jq
+    - neovim
+    - tmux
+    - zsh
+  pacman:
+    - htop
+    - jq
+    - neovim
+    - tmux
+    - zsh

@@ -1,7 +1,7 @@
 ---
 - name: Install packages from manifest
   apt:
-    name: "{{ apt.packages }}"
+    name: "{{ os_packages[ansible_facts.pkg_mgr] }}"
     state: latest  # noqa 403
     update_cache: true
   become: true

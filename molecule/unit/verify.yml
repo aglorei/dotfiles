@@ -17,3 +17,5 @@
       loop: "{{ dein_plugins }}"
       loop_control:
         loop_var: config
+    - name: Assert packages installation
+      include_tasks: ../resources/verify_packages.yml
