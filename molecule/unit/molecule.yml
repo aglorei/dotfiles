@@ -10,7 +10,7 @@ platforms:
       - SYS_ADMIN
     command: "/usr/sbin/init"
     groups:
-      - molecule_group_1
+      - molecule_mock_1
     tmpfs:
       - /run
       - /tmp
@@ -23,7 +23,7 @@ platforms:
       - SYS_ADMIN
     command: "/usr/sbin/init"
     groups:
-      - molecule_group_1
+      - molecule_mock_1
     tmpfs:
       - /run
       - /tmp

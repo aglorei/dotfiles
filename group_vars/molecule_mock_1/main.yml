@@ -1,15 +1,15 @@
 ---
 config_dirs:
   - src: >-
-      molecule_group_1/sync1
+      molecule_mock_1/sync1
     dest: >-
       {{ ansible_user_dir }}/sync1
   - src: >-
-      molecule_group_1/sync2
+      molecule_mock_1/sync2
     dest: >-
       {{ ansible_user_dir }}/sync2
   - src: >-
-      molecule_group_1/sync3
+      molecule_mock_1/sync3
     dest: >-
       {{ ansible_user_dir }}/sync3
 
@@ -32,7 +32,7 @@ config_files:
     mode: "0644"
     dir_mode: "0755"
   - content: >-
-      {{ lookup('template', 'molecule_group_1/init.vim') }}
+      {{ lookup('template', 'molecule_mock_1/init.vim') }}
     dest: >-
       {{ ansible_user_dir }}/.config/nvim/init.vim
     mode: "0644"

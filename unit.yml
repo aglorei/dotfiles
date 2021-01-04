@@ -1,5 +1,5 @@
 ---
 - name: Configure files, directories, and packages
-  hosts: molecule_group_1
+  hosts: molecule_mock_1
   tasks:
     - import_tasks: main.yml
