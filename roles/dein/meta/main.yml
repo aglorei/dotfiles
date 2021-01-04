@@ -16,13 +16,4 @@ galaxy_info:
         - focal
 
 allow_duplicates: false
-dependencies:
-  - role: packages
-    vars:
-      os_packages:
-        apt:
-          - neovim
-        homebrew:
-          - neovim
-        pacman:
-          - neovim
+dependencies: []
