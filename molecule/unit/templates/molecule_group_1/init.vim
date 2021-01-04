@@ -7,12 +7,14 @@ set runtimepath+={{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim
 if dein#load_state('{{ dein_bundles_dir }}')
   call dein#begin('{{ dein_bundles_dir }}')
 
-  " Add or remove your plugins here like this:
-  {% for plugin in dein_plugins -%}
-    call dein#add('{{ plugin.dest }}')
-  {% endfor %}
+  " Let dein manage dein.
+  call dein#add('{{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim')
 
-  " Required:
+  " Generic Programming
+  call dein#add('Raimondi/delimitMate')
+  call dein#add('tpope/vim-commentary')
+  call dein#add('tpope/vim-surround')
+
   call dein#end()
   call dein#save_state()
 endif
