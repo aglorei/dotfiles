@@ -35,11 +35,6 @@ provisioner:
   config_options:
     defaults:
       stdout_callback: debug
-  inventory:
-    links:
-      group_vars: ../../group_vars
   log: true
-  playbooks:
-    converge: ../../mock.yml
 verifier:
   name: ansible
