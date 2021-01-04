@@ -1,5 +1,5 @@
 ---
-- name: Install packages from manifest
+- name: Install Debian packages
   apt:
     name: "{{ os_packages[ansible_facts.pkg_mgr] }}"
     state: latest  # noqa 403
