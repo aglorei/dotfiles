@@ -6,6 +6,7 @@ driver:
 platforms:
   - name: molecule-archlinux-latest
     image: carlodepieri/docker-archlinux-ansible
+    dockerfile: resources/Dockerfile.j2
     env:
       ANSIBLE_USER: ansible
       SUDO_GROUP: wheel
@@ -25,6 +26,7 @@ platforms:
     pre_build_image: false
   - name: molecule-ubuntu-focal
     image: geerlingguy/docker-ubuntu2004-ansible
+    dockerfile: resources/Dockerfile.j2
     env:
       ANSIBLE_USER: ansible
       SUDO_GROUP: sudo
@@ -54,5 +56,8 @@ provisioner:
       molecule-ubuntu-focal:
         ansible_user: ansible
   log: true
+  playbooks:
+    prepare: resources/prepare.yml
+    verify: resources/verify.yml
 verifier:
   name: ansible

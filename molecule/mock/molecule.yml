@@ -6,6 +6,11 @@ driver:
 platforms:
   - name: molecule-archlinux-latest
     image: carlodepieri/docker-archlinux-ansible
+    dockerfile: resources/Dockerfile.j2
+    env:
+      ANSIBLE_USER: ansible
+      SUDO_GROUP: wheel
+      DEPLOY_GROUP: deployer
     capabilities:
       - SYS_ADMIN
     command: "/usr/sbin/init"
@@ -16,9 +21,14 @@ platforms:
       - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    pre_build_image: true
+    pre_build_image: false
   - name: molecule-ubuntu-focal
     image: geerlingguy/docker-ubuntu2004-ansible
+    dockerfile: resources/Dockerfile.j2
+    env:
+      ANSIBLE_USER: ansible
+      SUDO_GROUP: sudo
+      DEPLOY_GROUP: deployer
     capabilities:
       - SYS_ADMIN
     command: "/usr/sbin/init"
@@ -29,12 +39,21 @@ platforms:
       - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    pre_build_image: true
+    pre_build_image: false
 provisioner:
   name: ansible
   config_options:
     defaults:
       stdout_callback: debug
+  inventory:
+    host_vars:
+      molecule-archlinux-latest:
+        ansible_user: ansible
+      molecule-ubuntu-focal:
+        ansible_user: ansible
   log: true
+  playbooks:
+    prepare: resources/prepare.yml
+    verify: resources/verify.yml
 verifier:
   name: ansible
