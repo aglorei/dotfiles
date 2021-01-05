@@ -66,6 +66,7 @@ unix_files:
     dir_mode: "0700"
 
 dein_bundles_dir: "{{ ansible_user_dir }}/.vim/bundles"
+# TODO: Implement better init.vim templating
 dein_plugins:
   - dest: >-
       {{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim
