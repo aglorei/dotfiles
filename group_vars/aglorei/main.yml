@@ -83,7 +83,7 @@ dein_plugins:
   - dest: >-
       {{ dein_bundles_dir }}/repos/github.com/ctrlpvim/ctrlp.vim
   - dest: >-
-      {{ dein_bundles_dir }}/repos/github.com/autozimu/LanguageClient-neovim
+      {{ dein_bundles_dir }}/repos/github.com/autozimu/LanguageClient-neovim_next
   - dest: >-
       {{ dein_bundles_dir }}/repos/github.com/Shougo/deoplete.nvim
   - dest: >-
