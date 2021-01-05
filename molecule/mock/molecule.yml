@@ -54,6 +54,5 @@ provisioner:
   log: true
   playbooks:
     prepare: resources/prepare.yml
-    verify: resources/verify.yml
 verifier:
   name: ansible
