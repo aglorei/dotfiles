@@ -3,7 +3,7 @@ galaxy_info:
   author: aglorei
   description: Set up dotfiles playbook as an ansible-pull cron
   license: MIT
-  min_ansible_version: 2.10.3
+  min_ansible_version: 2.10.2
   platforms:
     - name: Archlinux
       versions:
