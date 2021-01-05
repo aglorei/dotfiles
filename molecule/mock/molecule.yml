@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: molecule-archlinux-latest
-    image: carlodepieri/docker-archlinux-ansible
+    image: archlinux:latest
     dockerfile: resources/Dockerfile.j2
     env:
       ANSIBLE_USER: ansible
@@ -13,7 +13,6 @@ platforms:
       DEPLOY_GROUP: deployer
     capabilities:
       - SYS_ADMIN
-    command: "/usr/sbin/init"
     groups:
       - molecule_mock_1
     tmpfs:
@@ -23,7 +22,7 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     pre_build_image: false
   - name: molecule-ubuntu-focal
-    image: geerlingguy/docker-ubuntu2004-ansible
+    image: ubuntu:20.04
     dockerfile: resources/Dockerfile.j2
     env:
       ANSIBLE_USER: ansible
@@ -31,7 +30,6 @@ platforms:
       DEPLOY_GROUP: deployer
     capabilities:
       - SYS_ADMIN
-    command: "/usr/sbin/init"
     groups:
       - molecule_mock_1
     tmpfs:
