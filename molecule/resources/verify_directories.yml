@@ -1,9 +1,0 @@
----
-- name: Read directory
-  stat:
-    path: "{{ config.dest }}"
-  register: configdir_stat
-
-- name: Assert directory
-  assert:
-    that: configdir_stat.stat.exists

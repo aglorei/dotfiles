@@ -1,0 +1,19 @@
+---
+- name: Read plugin repositories
+  find:
+    depth: 2
+    file_type: directory
+    paths: "{{ dein_plugins_dir }}"
+    recurse: true
+  register: dein_repos_find
+
+- name: Map list of plugin repository directories
+  set_fact:
+    dein_repos_dirs: "{{ dein_repos_find.files | map(attribute='path') | list }}"
+
+- name: Assert plugins directories
+  assert:
+    that: repo in dein_repos_dirs
+  loop: "{{ dein_plugins_repos }}"
+  loop_control:
+    loop_var: repo
