@@ -213,7 +213,31 @@ os_packages:
   pacman:
     # groups
     - base
-    - base-devel
+    # pacman -Sg base-devel
+    - autoconf
+    - automake
+    - binutils
+    - bison
+    - fakeroot
+    - file
+    - findutils
+    - flex
+    - gawk
+    - gcc
+    - gettext
+    - grep
+    - groff
+    - gzip
+    - libtool
+    - m4
+    - make
+    - pacman
+    - patch
+    - pkgconf
+    - sed
+    - sudo
+    - texinfo
+    - which
     # individual
     - ansible
     - apache
