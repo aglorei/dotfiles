@@ -1,0 +1,26 @@
+---
+name: submodule-update
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - .gitmodules
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  molecule:
+    container:
+      image: quay.io/ansible/molecule:3.1.5
+    name: Execute Molecule aglorei scenario test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - env:
+          PY_COLORS: 1
+          ANSIBLE_FORCE_COLOR: 1
+        run: |
+          molecule test --scenario-name aglorei --parallel
