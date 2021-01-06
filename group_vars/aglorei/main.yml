@@ -233,7 +233,7 @@ os_packages:
     - apache
     - arp-scan
     - aws-cli
-    - bind-tools
+    - bind
     - certbot
     - cmake
     - cronie
