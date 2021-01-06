@@ -4,7 +4,7 @@ name: submodule-update
 on:  # yamllint disable-line rule:truthy
   push:
     paths:
-      - .gitmodules
+      - files/aglorei/*
   pull_request:
     branches:
       - master
