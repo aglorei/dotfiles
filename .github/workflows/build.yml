@@ -29,7 +29,7 @@ jobs:
   molecule:
     container:
       image: quay.io/ansible/molecule:3.1.5
-    name: Unit test Ansible roles
+    name: Execute Molecule mock scenario test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
