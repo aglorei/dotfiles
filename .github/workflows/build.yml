@@ -31,10 +31,10 @@ jobs:
       image: quay.io/ansible/molecule:3.1.5
     name: Execute Molecule mock scenario test
     runs-on: ubuntu-latest
+    env:
+      PY_COLORS: 1
+      ANSIBLE_FORCE_COLOR: 1
     steps:
       - uses: actions/checkout@v2
-      - env:
-          PY_COLORS: 1
-          ANSIBLE_FORCE_COLOR: 1
         run: |
           molecule test --scenario-name mock --parallel
