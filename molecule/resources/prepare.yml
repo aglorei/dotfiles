@@ -9,9 +9,9 @@
             name:
               - git
               - rsync
-              - sudo
             state: present
             update_cache: true
+          become: true
       when: ansible_distribution == "Archlinux"
     - name: Prepare Ubuntu instances
       block:
@@ -22,4 +22,5 @@
               - rsync
             state: present
             update_cache: true
+          become: true
       when: ansible_distribution == "Ubuntu"

@@ -14,7 +14,9 @@ platforms:
     capabilities:
       - SYS_ADMIN
     groups:
-      - molecule_mock_1
+      - aglorei
+      - aglorei_Archlinux
+      - aglorei_personal
     tmpfs:
       - /run
       - /tmp
@@ -31,7 +33,9 @@ platforms:
     capabilities:
       - SYS_ADMIN
     groups:
-      - molecule_mock_1
+      - aglorei
+      - aglorei_Ubuntu
+      - aglorei_work_1
     tmpfs:
       - /run
       - /tmp

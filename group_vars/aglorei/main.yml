@@ -65,6 +65,25 @@ unix_files:
     mode: "0644"
     dir_mode: "0700"
 
+dein_bundles_dir: "{{ ansible_user_dir }}/.vim/bundles"
+dein_plugins_dir: "{{ dein_bundles_dir }}/repos/github.com"
+# TODO: Implement better init.vim templating
+dein_plugins_repos:
+  - "{{ dein_plugins_dir }}/Shougo/dein.vim"
+  - "{{ dein_plugins_dir }}/Raimondi/delimitMate"
+  - "{{ dein_plugins_dir }}/tpope/vim-commentary"
+  - "{{ dein_plugins_dir }}/tpope/vim-surround"
+  - "{{ dein_plugins_dir }}/scrooloose/syntastic"
+  - "{{ dein_plugins_dir }}/PProvost/vim-ps1"
+  - "{{ dein_plugins_dir }}/ctrlpvim/ctrlp.vim"
+  - "{{ dein_plugins_dir }}/autozimu/LanguageClient-neovim_next"
+  - "{{ dein_plugins_dir }}/Shougo/deoplete.nvim"
+  - "{{ dein_plugins_dir }}/tpope/vim-fugitive"
+  - "{{ dein_plugins_dir }}/airblade/vim-gitgutter"
+  - "{{ dein_plugins_dir }}/vim-airline/vim-airline"
+  - "{{ dein_plugins_dir }}/vim-airline/vim-airline-themes"
+  - "{{ dein_plugins_dir }}/chriskempson/base16-vim"
+
 git:
   core:
     editor: nvim
@@ -194,13 +213,37 @@ os_packages:
   pacman:
     # groups
     - base
-    - base-devel
+    # pacman -Sg base-devel
+    - autoconf
+    - automake
+    - binutils
+    - bison
+    - fakeroot
+    - file
+    - findutils
+    - flex
+    - gawk
+    - gcc
+    - gettext
+    - grep
+    - groff
+    - gzip
+    - libtool
+    - m4
+    - make
+    - pacman
+    - patch
+    - pkgconf
+    - sed
+    - sudo
+    - texinfo
+    - which
     # individual
     - ansible
     - apache
     - arp-scan
     - aws-cli
-    - bind-tools
+    - bind
     - certbot
     - cmake
     - cronie

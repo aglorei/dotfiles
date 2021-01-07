@@ -1,0 +1,5 @@
+---
+- name: Configure files, directories, and packages
+  hosts: aglorei
+  tasks:
+    - import_tasks: ../../main.yml

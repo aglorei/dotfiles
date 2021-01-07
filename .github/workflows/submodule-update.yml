@@ -1,0 +1,33 @@
+---
+name: submodule-update
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - files/aglorei/*
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  molecule:
+    container:
+      image: quay.io/ansible/molecule:3.1.5
+    name: Execute Molecule aglorei scenario test
+    runs-on: ubuntu-latest
+    env:
+      PY_COLORS: 1
+      ANSIBLE_FORCE_COLOR: 1
+      ANSIBLE_VAULT_PASSWORD_FILE: /home/runner/work/_temp/.vault-pass
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - run: |
+          echo "${{ secrets.ANSIBLE_VAULT_PASSWORD_AGLOREI }}" \
+            > $ANSIBLE_VAULT_PASSWORD_FILE
+          molecule test --scenario-name aglorei
+      - if: always()
+        run: |
+          rm $ANSIBLE_VAULT_PASSWORD_FILE
+          docker logout $DOCKER_SERVER
