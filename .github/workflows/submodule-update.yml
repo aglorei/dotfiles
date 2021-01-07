@@ -22,5 +22,12 @@ jobs:
       - env:
           PY_COLORS: 1
           ANSIBLE_FORCE_COLOR: 1
+          ANSIBLE_VAULT_PASSWORD_FILE: /home/runner/work/_temp/.vault-pass
         run: |
+          echo {{ secrets.ANSIBLE_VAULT_PASSWORD_AGLOREI }} \
+            > $ANSIBLE_VAULT_PASSWORD_FILE
           molecule test --scenario-name aglorei --parallel
+      - if: always()
+        run: |
+          rm $ANSIBLE_VAULT_PASSWORD_FILE
+          docker logout $DOCKER_SERVER
