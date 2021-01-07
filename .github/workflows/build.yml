@@ -36,5 +36,5 @@ jobs:
       ANSIBLE_FORCE_COLOR: 1
     steps:
       - uses: actions/checkout@v2
-        run: |
+      - run: |
           molecule test --scenario-name mock --parallel
