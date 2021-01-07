@@ -24,7 +24,7 @@ jobs:
           ANSIBLE_FORCE_COLOR: 1
           ANSIBLE_VAULT_PASSWORD_FILE: /home/runner/work/_temp/.vault-pass
         run: |
-          echo {{ secrets.ANSIBLE_VAULT_PASSWORD_AGLOREI }} \
+          echo "${{ secrets.ANSIBLE_VAULT_PASSWORD_AGLOREI }}" \
             > $ANSIBLE_VAULT_PASSWORD_FILE
           molecule test --scenario-name aglorei --parallel
       - if: always()
