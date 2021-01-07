@@ -26,7 +26,7 @@ jobs:
       - run: |
           echo "${{ secrets.ANSIBLE_VAULT_PASSWORD_AGLOREI }}" \
             > $ANSIBLE_VAULT_PASSWORD_FILE
-          molecule test --scenario-name aglorei --parallel
+          molecule test --scenario-name aglorei
       - if: always()
         run: |
           rm $ANSIBLE_VAULT_PASSWORD_FILE
