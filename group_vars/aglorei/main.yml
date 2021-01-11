@@ -79,6 +79,7 @@ dein_plugins_repos:
   - "{{ dein_plugins_dir }}/ctrlpvim/ctrlp.vim"
   - "{{ dein_plugins_dir }}/scrooloose/syntastic"
   - "{{ dein_plugins_dir }}/PProvost/vim-ps1"
+  - "{{ dein_plugins_dir }}/neoclide/coc.nvim_release"
   - "{{ dein_plugins_dir }}/airblade/vim-gitgutter"
 
 git:
