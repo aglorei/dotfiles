@@ -114,6 +114,7 @@ os_packages:
     - neovim
     - netdata
     - nmap
+    - nodejs
     - p7zip
     - packer
     - pipenv
@@ -264,6 +265,7 @@ os_packages:
     - neovim
     - netdata
     - nmap
+    - nodejs
     - openssh
     - p7zip
     - packer
