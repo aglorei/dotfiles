@@ -33,10 +33,6 @@ if dein#load_state('{{ dein_bundles_dir }}')
     \ 'build': 'bash install.sh',
     \ })
   call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
 
   " Version Control
   call dein#add('tpope/vim-fugitive')
@@ -48,6 +44,12 @@ if dein#load_state('{{ dein_bundles_dir }}')
 
   " Colorschemes
   call dein#add('chriskempson/base16-vim')
+
+  " Not neovim
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
 
   call dein#end()
   call dein#save_state()
