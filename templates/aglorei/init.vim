@@ -17,6 +17,21 @@ if dein#load_state('{{ dein_bundles_dir }}')
   " Let dein manage dein.
   call dein#add('{{ dein_bundles_dir }}/repos/github.com/Shougo/dein.vim')
 
+  "
+  " Visual Interface Plugins
+  "
+
+  " Airline
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+
+  " Colorschemes
+  call dein#add('chriskempson/base16-vim')
+
+  "
+  " Programming Plugins
+  "
+
   " Generic Programming
   call dein#add('Raimondi/delimitMate')
   call dein#add('tpope/vim-commentary')
@@ -25,19 +40,16 @@ if dein#load_state('{{ dein_bundles_dir }}')
   " Filesystem Navigation
   call dein#add('ctrlpvim/ctrlp.vim')
 
-  " Syntax
+  " Filetype Syntax and Highlighting
   call dein#add('scrooloose/syntastic')
   call dein#add('PProvost/vim-ps1')
 
   " Version Control
   call dein#add('airblade/vim-gitgutter')
 
-  " Visual Interface
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
-
-  " Colorschemes
-  call dein#add('chriskempson/base16-vim')
+  "
+  " Misc Plugins
+  "
 
   " Not neovim
   if !has('nvim')
@@ -116,9 +128,6 @@ let mapleader = ','
 
 " Plugin configurations
 
-" CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-
 " vim-airline
 let g:airline_theme='base16_default'
 let g:airline#extensions#tabline#enabled = 1
@@ -126,8 +135,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" vim-gitgutter
-noremap  <Leader>g :GitGutterToggle<CR>
+" CtrlP
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -138,6 +147,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" vim-gitgutter
+noremap  <Leader>g :GitGutterToggle<CR>
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
