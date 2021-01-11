@@ -266,6 +266,7 @@ os_packages:
     - netdata
     - nmap
     - nodejs
+    - npm
     - openssh
     - p7zip
     - packer
