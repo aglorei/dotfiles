@@ -22,22 +22,17 @@ if dein#load_state('{{ dein_bundles_dir }}')
   call dein#add('tpope/vim-commentary')
   call dein#add('tpope/vim-surround')
 
+  " Filesystem Navigation
+  call dein#add('ctrlpvim/ctrlp.vim')
+
   " Syntax
   call dein#add('scrooloose/syntastic')
   call dein#add('PProvost/vim-ps1')
 
-  " Utility
-  call dein#add('ctrlpvim/ctrlp.vim')
-  call dein#add('autozimu/LanguageClient-neovim', {
-    \ 'rev': 'next',
-    \ 'build': 'bash install.sh',
-    \ })
-  call dein#add('Shougo/deoplete.nvim')
-
   " Version Control
   call dein#add('airblade/vim-gitgutter')
 
-  " Interface
+  " Visual Interface
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
 
@@ -103,7 +98,6 @@ set laststatus=2
 set wildmenu
 
 set autoread
-set hidden
 set nobackup
 set nowritebackup
 set noswapfile
@@ -144,20 +138,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" LanguageClient-neovim
-" Requires 'set hidden'
-
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls']
-    \ }
-
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> nm :call LanguageClient#textDocument_rename()<CR>
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
 
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
