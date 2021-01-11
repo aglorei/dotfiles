@@ -46,7 +46,7 @@ if dein#load_state('{{ dein_bundles_dir }}')
 
   " Programming Snippet and Completion
   call dein#add('neoclide/coc.nvim', {
-    \ 'rev': 'release'
+    \ 'merged': 0
     \ })
 
   " Version Control
