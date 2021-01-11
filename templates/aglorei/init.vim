@@ -131,19 +131,26 @@ map \ :
 
 let mapleader = ','
 
-" Plugin configurations
+"
+" Plugin configuration: vim-airline
+"
 
-" vim-airline
 let g:airline_theme='base16_default'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" CtrlP
+"
+" Plugin configuration: ctrlp.vim
+"
+
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
-" syntastic
+"
+" Plugin configuration: syntastic
+"
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -153,7 +160,9 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" vim-gitgutter
+"
+" Plugin configuration: vim-gitgutter
+"
 noremap  <Leader>g :GitGutterToggle<CR>
 
 " this machine config
