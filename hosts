@@ -21,20 +21,6 @@ aglorei_Ubuntu
 aglorei_personal
 aglorei_work_1
 
-#######################
-## aglorei os groups ##
-#######################
-
-[aglorei_Archlinux]
-lithium
-
-[aglorei_MacOSX]
-S03122-MBPR
-Tienlongs-MacBook-Pro
-
-[aglorei_Ubuntu]
-aglorei-pc-1
-
 ############################
 ## aglorei logical groups ##
 ############################

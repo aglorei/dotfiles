@@ -15,7 +15,6 @@ platforms:
       - SYS_ADMIN
     groups:
       - aglorei
-      - aglorei_Archlinux
       - aglorei_personal
     tmpfs:
       - /run
@@ -34,7 +33,6 @@ platforms:
       - SYS_ADMIN
     groups:
       - aglorei
-      - aglorei_Ubuntu
       - aglorei_work_1
     tmpfs:
       - /run
