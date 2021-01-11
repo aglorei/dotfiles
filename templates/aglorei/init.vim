@@ -35,7 +35,6 @@ if dein#load_state('{{ dein_bundles_dir }}')
   call dein#add('Shougo/deoplete.nvim')
 
   " Version Control
-  call dein#add('tpope/vim-fugitive')
   call dein#add('airblade/vim-gitgutter')
 
   " Interface
