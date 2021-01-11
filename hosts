@@ -10,9 +10,9 @@ lithium
 S03122-MBPR
 Tienlongs-MacBook-Pro
 
-############################
-## aglorei configurations ##
-############################
+##########################
+## aglorei parent group ##
+##########################
 
 [aglorei:children]
 aglorei_Archlinux
@@ -20,6 +20,10 @@ aglorei_MacOSX
 aglorei_Ubuntu
 aglorei_personal
 aglorei_work_1
+
+#######################
+## aglorei os groups ##
+#######################
 
 [aglorei_Archlinux]
 lithium
@@ -30,6 +34,10 @@ Tienlongs-MacBook-Pro
 
 [aglorei_Ubuntu]
 aglorei-pc-1
+
+############################
+## aglorei logical groups ##
+############################
 
 [aglorei_personal]
 aglorei-pc-1
