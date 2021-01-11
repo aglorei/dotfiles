@@ -44,6 +44,11 @@ if dein#load_state('{{ dein_bundles_dir }}')
   call dein#add('scrooloose/syntastic')
   call dein#add('PProvost/vim-ps1')
 
+  " Programming Snippet and Completion
+  call dein#add('neoclide/coc.nvim', {
+    \ 'rev': 'release'
+    \ })
+
   " Version Control
   call dein#add('airblade/vim-gitgutter')
 
