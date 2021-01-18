@@ -21,6 +21,7 @@ aglorei_MacOSX
 aglorei_Ubuntu
 aglorei_personal
 aglorei_work_1
+aglorei_work_2
 
 #######################
 ## aglorei os groups ##
@@ -47,5 +48,7 @@ lithium
 Tienlongs-MacBook-Pro
 
 [aglorei_work_1]
-ldc18dec
 S03122-MBPR
+
+[aglorei_work_2]
+ldc18dec
