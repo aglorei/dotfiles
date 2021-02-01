@@ -115,8 +115,6 @@ set laststatus=2
 set wildmenu
 
 set autoread
-set nobackup
-set nowritebackup
 set noswapfile
 set fileformats=unix,dos,mac
 set completeopt=longest,menuone
