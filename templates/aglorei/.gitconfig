@@ -6,9 +6,9 @@
   email = {{ git.user.email }}
 {% if git.user.signingkey is defined %}
   signingkey = {{ git.user.signingkey }}
-{% endif %}
 [commit]
   gpgsign = true
+{% endif %}
 [diff "ansible-vault"]
   textconv = ansible-vault view
 [color]
