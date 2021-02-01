@@ -101,7 +101,6 @@ os_packages:
     - fasd
     - fd-find
     - fzf
-    - gist
     - git
     - gnuplot
     - grub-pc
@@ -149,7 +148,6 @@ os_packages:
     - figlet
     - fortune
     - fzf
-    - gist
     - git
     - gnupg
     - helm
@@ -250,7 +248,6 @@ os_packages:
     - fasd
     - fd
     - fzf
-    - gist
     - git
     - gnuplot
     - grub
