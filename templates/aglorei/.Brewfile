@@ -129,6 +129,7 @@ cask "keybase"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
 cask "minikube"
+cask "miro"
 # Emoji picker optimized for blind people
 cask "rocket"
 # Instant messaging application focusing on security

@@ -192,6 +192,7 @@ os_packages:
     - keybase
     - mactex
     - minikube
+    - miro
     - rocket
     - signal
     - slack
