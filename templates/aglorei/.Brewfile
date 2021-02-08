@@ -12,6 +12,8 @@ brew "ansible"
 brew "arp-scan"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Cross-platform make
@@ -34,20 +36,30 @@ brew "fzf"
 brew "gist"
 # Distributed revision control system
 brew "git"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
-# The Kubernetes package manager
+# Kubernetes package manager
 brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Tool to report network interface bandwidth
 brew "ifstat"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Network authentication protocol
+brew "krb5"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # LastPass command-line interface tool
 brew "lastpass-cli"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -72,6 +84,8 @@ brew "postgresql"
 brew "pstree"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
@@ -89,27 +103,41 @@ brew "vim"
 # Internet file retriever
 brew "wget"
 # Graphical network analyzer and capture tool
-brew "wireshark", link: false
+brew "wireshark"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd", args: ["with-logging"]
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# Application launcher and productivity software
 cask "alfred"
+# Two-factor authentication software
 cask "authy"
+# Open-source KVM software
 cask "barrier"
+# Web browser focusing on privacy
 cask "brave-browser"
+# App to build and share containerized applications and microservices
 cask "docker"
 cask "font-mononoki-nerd-font-mono"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 cask "java"
+# End-to-end encryption software
 cask "keybase"
+# Full TeX Live distribution with GUI applications
 cask "mactex"
 cask "minikube"
+# Emoji picker optimized for blind people
 cask "rocket"
+# Instant messaging application focusing on security
 cask "signal"
+# Team communication and collaboration software
 cask "slack"
+# Music streaming service
 cask "spotify"
+# Video game digital distribution service
 cask "steam"
+# Multimedia player
 cask "vlc"
