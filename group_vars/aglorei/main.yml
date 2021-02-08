@@ -177,7 +177,7 @@ os_packages:
     - wget
     - wireshark
     - zsh
-  hombrew_with_options:
+  homebrew_with_options:
     koekeishiya/formulae/skhd:
       - with-logging
   homebrew_casks:
