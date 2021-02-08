@@ -184,17 +184,17 @@ os_packages:
     - alfred
     - authy
     - barrier
-    - brave-browser-beta
+    - brave-browser
     - docker
     - font-mononoki-nerd-font-mono
-    - iterm2-beta
+    - iterm2
     - java
     - keybase
     - mactex
     - minikube
     - rocket
     - signal
-    - slack-beta
+    - slack
     - spotify
     - steam
     - vlc
