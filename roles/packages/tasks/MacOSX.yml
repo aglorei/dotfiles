@@ -20,7 +20,7 @@
 - name: Tap external repositories
   homebrew_tap:
     name: "{{ os_packages.homebrew_taps }}"
-    state: latest  # noqa 403
+    state: present
 
 - name: Install homebrew packages
   homebrew:
