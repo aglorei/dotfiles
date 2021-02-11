@@ -36,8 +36,6 @@ brew "fzf"
 brew "gist"
 # Distributed revision control system
 brew "git"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Kubernetes package manager
@@ -46,8 +44,6 @@ brew "helm"
 brew "htop"
 # Tool to report network interface bandwidth
 brew "ifstat"
-# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
-brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
