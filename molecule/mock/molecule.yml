@@ -7,8 +7,6 @@ platforms:
   - name: molecule-archlinux-latest
     image: archlinux:latest
     dockerfile: resources/Dockerfile.j2
-    force: true
-    pre_build_image: false
     env:
       ANSIBLE_USER: ansible
       SUDO_GROUP: wheel
@@ -22,11 +20,10 @@ platforms:
       - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: false
   - name: molecule-ubuntu-focal
     image: ubuntu:20.04
     dockerfile: resources/Dockerfile.j2
-    force: true
-    pre_build_image: false
     env:
       ANSIBLE_USER: ansible
       SUDO_GROUP: sudo
@@ -40,6 +37,7 @@ platforms:
       - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: false
 provisioner:
   name: ansible
   config_options:
