@@ -191,6 +191,7 @@ os_packages:
     - java
     - keybase
     - mactex
+    - microsoft-teams
     - minikube
     - miro
     - rocket

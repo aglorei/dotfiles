@@ -124,6 +124,7 @@ cask "java"
 cask "keybase"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
+cask "microsoft-teams"
 cask "minikube"
 cask "miro"
 # Emoji picker optimized for blind people
