@@ -111,6 +111,10 @@ cask "font-mononoki"
 cask "iterm2"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Office suite
+cask "microsoft-office"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Online collaborative whiteboard platform

@@ -191,6 +191,7 @@ os_packages:
     - font-mononoki
     - iterm2
     - mactex
+    - microsoft-office
     - microsoft-teams
     - miro
     - rocket
