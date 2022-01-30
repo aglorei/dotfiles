@@ -12,8 +12,6 @@ brew "ansible"
 brew "arp-scan"
 # Official Amazon AWS command-line interface
 brew "awscli"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Cross-platform make
@@ -32,8 +30,6 @@ brew "figlet"
 brew "fortune"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Command-line utility for uploading Gists
-brew "gist"
 # Distributed revision control system
 brew "git"
 # GNU Pretty Good Privacy (PGP) package
@@ -44,28 +40,26 @@ brew "helm"
 brew "htop"
 # Tool to report network interface bandwidth
 brew "ifstat"
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Network authentication protocol
-brew "krb5"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # LastPass command-line interface tool
 brew "lastpass-cli"
-# C library SSHv1/SSHv2 client and server protocols
-brew "libssh"
+# Run a Kubernetes cluster locally
+brew "minikube"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Diagnose infrastructure problems with metrics, visualizations & alarms
-brew "netdata", restart_service: true
+brew "netdata"
 # Port scanning utility for large networks
 brew "nmap"
 # Platform built on V8 to build network applications
 brew "node"
+# Development kit for the Java programming language
+brew "openjdk"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Tool for creating identical machine images for multiple platforms
@@ -74,14 +68,10 @@ brew "packer"
 brew "pipenv"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
-# Object-relational database system
-brew "postgresql"
 # Show ps output as a tree
 brew "pstree"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
@@ -116,16 +106,14 @@ cask "barrier"
 cask "brave-browser"
 # App to build and share containerized applications and microservices
 cask "docker"
-cask "font-mononoki-nerd-font-mono"
+cask "font-mononoki"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-cask "java"
-# End-to-end encryption software
-cask "keybase"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
+# Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-cask "minikube"
+# Online collaborative whiteboard platform
 cask "miro"
 # Emoji picker optimized for blind people
 cask "rocket"

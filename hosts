@@ -10,6 +10,7 @@ ldc18dec
 lithium
 S03122-MBPR
 Tienlongs-MacBook-Pro
+Tienlongs-MacBook-Pro-2
 
 ##########################
 ## aglorei parent group ##
@@ -33,6 +34,7 @@ lithium
 [aglorei_MacOSX]
 S03122-MBPR
 Tienlongs-MacBook-Pro
+Tienlongs-MacBook-Pro-2
 
 [aglorei_Ubuntu]
 aglorei-pc-1
@@ -46,6 +48,7 @@ ldc18dec
 aglorei-pc-1
 lithium
 Tienlongs-MacBook-Pro
+Tienlongs-MacBook-Pro-2
 
 [aglorei_work_1]
 S03122-MBPR

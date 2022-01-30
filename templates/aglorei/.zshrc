@@ -1,5 +1,8 @@
 export ZSH=$HOME/.oh-my-zsh
 
+# homebrew
+[ -d /opt/homebrew/bin ] && PATH="/opt/homebrew/bin:$PATH"
+
 ZSH_THEME=""
 plugins=(git fasd fzf)
 
@@ -12,9 +15,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 # geometry
 source "$HOME/.geometry/geometry.zsh"
 GEOMETRY_STATUS_SYMBOL_COLOR_HASH=true
-
-# python2 brew
-[ -d /usr/local/opt/python@2/bin ] && PATH="/usr/local/opt/python@2/bin:$PATH"
 
 # list
 alias ls="{{ 'ls -G' if ansible_system == 'Darwin' else 'ls --color' }}"
