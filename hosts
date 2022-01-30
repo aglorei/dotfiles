@@ -6,7 +6,6 @@ localhost
 
 [workstation]
 aglorei-pc-1
-ldc18dec
 lithium
 S03122-MBPR
 Tienlongs-MacBook-Pro
@@ -22,7 +21,6 @@ aglorei_MacOSX
 aglorei_Ubuntu
 aglorei_personal
 aglorei_work_1
-aglorei_work_2
 
 #######################
 ## aglorei os groups ##
@@ -38,7 +36,6 @@ Tienlongs-MacBook-Pro-2
 
 [aglorei_Ubuntu]
 aglorei-pc-1
-ldc18dec
 
 ############################
 ## aglorei logical groups ##
@@ -52,6 +49,3 @@ Tienlongs-MacBook-Pro-2
 
 [aglorei_work_1]
 S03122-MBPR
-
-[aglorei_work_2]
-ldc18dec
