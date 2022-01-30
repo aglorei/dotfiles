@@ -141,7 +141,6 @@ os_packages:
     - azure-cli
     - cmake
     - cowsay
-    - koekeishiya/formulae/yabai
     - doctl
     - fasd
     - fd
@@ -154,13 +153,16 @@ os_packages:
     - htop
     - ifstat
     - jq
+    - koekeishiya/formulae/yabai
     - kubernetes-cli
     - lastpass-cli
+    - minikube
     - neofetch
     - neovim
     - netdata
     - nmap
     - node
+    - openjdk
     - p7zip
     - packer
     - pipenv
@@ -186,13 +188,10 @@ os_packages:
     - barrier
     - brave-browser
     - docker
-    - font-mononoki-nerd-font-mono
+    - font-mononoki
     - iterm2
-    - java
-    - keybase
     - mactex
     - microsoft-teams
-    - minikube
     - miro
     - rocket
     - signal
@@ -290,6 +289,6 @@ os_packages:
 
 pinentry_path:
   Archlinux: /usr/bin/pinentry-curses
-  MacOSX: /usr/local/bin/pinentry-curses
+  MacOSX: /opt/homebrew/bin/pinentry-curses
   RedHat: /usr/bin/pinentry-curses
   Ubuntu: /usr/bin/pinentry-curses
