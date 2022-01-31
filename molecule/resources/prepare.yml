@@ -2,25 +2,21 @@
 - name: Prepare
   hosts: all
   tasks:
-    - name: Prepare Archlinux instances
-      block:
-        - name: Install requisite packages
-          community.general.pacman:
-            name:
-              - git
-              - rsync
-            state: present
-            update_cache: true
-          become: true
+    - name: Install Archlinux requisite packages
+      community.general.pacman:
+        name:
+          - git
+          - rsync
+        state: present
+        update_cache: true
+      become: true
       when: ansible_distribution == "Archlinux"
-    - name: Prepare Ubuntu instances
-      block:
-        - name: Install requisite packages
-          ansible.builtin.apt:
-            name:
-              - git
-              - rsync
-            state: present
-            update_cache: true
-          become: true
+    - name: Install Ubuntu requisite packages
+      ansible.builtin.apt:
+        name:
+          - git
+          - rsync
+        state: present
+        update_cache: true
+      become: true
       when: ansible_distribution == "Ubuntu"
