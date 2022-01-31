@@ -6,7 +6,7 @@ driver:
 platforms:
   - name: molecule-archlinux-latest
     image: archlinux:latest
-    dockerfile: resources/Dockerfile.j2
+    dockerfile: ../resources/Dockerfile.j2
     env:
       ANSIBLE_USER: ansible
       SUDO_GROUP: wheel
@@ -23,7 +23,7 @@ platforms:
     pre_build_image: false
   - name: molecule-ubuntu-focal
     image: ubuntu:20.04
-    dockerfile: resources/Dockerfile.j2
+    dockerfile: ../resources/Dockerfile.j2
     env:
       ANSIBLE_USER: ansible
       SUDO_GROUP: sudo
