@@ -1,6 +1,6 @@
 ---
 - name: Ensure logfile path with correct ownership
-  file:
+  ansible.builtin.file:
     path: "{{ logfile }}"
     mode: 0644
     owner: "{{ ansible_user_id }}"

@@ -1,6 +1,6 @@
 ---
 - name: Ensure config file directories
-  file:
+  ansible.builtin.file:
     path: "{{ config.dest | dirname }}"
     mode: "{{ config.dir_mode }}"
     state: directory
@@ -11,7 +11,7 @@
   no_log: true
 
 - name: Copy config files
-  copy:
+  ansible.builtin.copy:
     content: "{{ config.content }}"
     dest: "{{ config.dest }}"
     mode: "{{ config.mode }}"
@@ -21,7 +21,7 @@
   no_log: true
 
 - name: Synchronize directories
-  synchronize:
+  ansible.posix.synchronize:
     src: "{{ config.src }}/"
     dest: "{{ config.dest }}/"
     checksum: true

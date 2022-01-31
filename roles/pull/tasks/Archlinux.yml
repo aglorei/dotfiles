@@ -1,6 +1,6 @@
 ---
 - name: Add ansible-pull to root crontab
-  cron:
+  ansible.builtin.cron:
     name: dotfiles
     minute: "*/15"
     job: >-

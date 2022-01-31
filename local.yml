@@ -2,4 +2,4 @@
 - name: Configure files, directories, and packages
   hosts: workstation:localhost
   tasks:
-    - import_tasks: main.yml
+    - ansible.builtin.import_tasks: main.yml

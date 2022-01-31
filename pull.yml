@@ -3,7 +3,7 @@
   hosts: workstation:localhost
   pre_tasks:
     - name: Preflight check for vault material
-      assert:
+      ansible.builtin.assert:
         that:
           - "vault_id is defined"
           - "vault_password_file is defined"
@@ -11,5 +11,5 @@
       when: inventory_hostname != 'localhost'
   tasks:
     - name: Include "pull" role
-      include_role:
+      ansible.builtin.include_role:
         name: pull

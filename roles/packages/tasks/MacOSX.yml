@@ -1,34 +1,34 @@
 ---
 - name: Check Brewfile exists
-  stat:
+  ansible.builtin.stat:
     path: "{{ homebrew_brewfile_dest }}"
   register: brewfile_check
 
 - name: Cleanup packages not found in manifest
   block:
     - name: Execute homebrew cleanup
-      shell: |
+      ansible.builtin.command: |
         brew bundle cleanup --file={{ homebrew_brewfile_dest }} --force
       changed_when: "homebrew_cleanup.stdout_lines | length"
       register: homebrew_cleanup
     - name: Print homebrew cleanup stdout
-      debug:
+      ansible.builtin.debug:
         var: homebrew_cleanup.stdout_lines
         verbosity: 2
   when: brewfile_check.stat.exists
 
 - name: Tap external repositories
-  homebrew_tap:
+  community.general.homebrew_tap:
     name: "{{ os_packages.homebrew_taps }}"
     state: present
 
 - name: Install homebrew packages
-  homebrew:
+  community.general.homebrew:
     name: "{{ os_packages[ansible_facts.pkg_mgr] }}"
     state: latest  # noqa 403
 
 - name: Install homebrew packages with options
-  homebrew:
+  community.general.homebrew:
     name: "{{ package.key }}"
     install_options: "{{ package.value }}"
     state: latest  # noqa 403
@@ -37,16 +37,16 @@
     loop_var: package
 
 - name: Install homebrew casks
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: "{{ os_packages.homebrew_casks }}"
     greedy: true
     state: latest  # noqa 403
 
 - name: Update homebrew and upgrade all packages
-  homebrew:
+  community.general.homebrew:
     update_homebrew: true
     upgrade_all: true
 
 - name: Update homebrew cask and upgrade all packages
-  homebrew_cask:
+  community.general.homebrew_cask:
     upgrade_all: true

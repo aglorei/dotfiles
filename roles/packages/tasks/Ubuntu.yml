@@ -1,22 +1,22 @@
 ---
 - name: Install Debian packages
-  apt:
+  ansible.builtin.apt:
     name: "{{ os_packages[ansible_facts.pkg_mgr] }}"
     state: latest  # noqa 403
     update_cache: true
   become: true
 
 - name: Upgrade all packages to the latest version
-  apt:
+  ansible.builtin.apt:
     upgrade: dist
   become: true
 
 - name: Remove useless packages from the cache
-  apt:
+  ansible.builtin.apt:
     autoclean: true
   become: true
 
 - name: Remove dependencies that are no longer required
-  apt:
+  ansible.builtin.apt:
     autoremove: true
   become: true
