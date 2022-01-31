@@ -1,10 +1,10 @@
 ---
 - name: Gather package facts
-  package_facts:
+  ansible.builtin.package_facts:
     manager: auto
 
 - name: Assert package
-  assert:
+  ansible.builtin.assert:
     that: package in ansible_facts.packages
   loop: "{{ os_packages[ansible_facts.pkg_mgr] }}"
   loop_control:

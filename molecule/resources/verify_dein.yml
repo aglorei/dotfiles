@@ -1,6 +1,6 @@
 ---
 - name: Read plugin repositories
-  find:
+  ansible.builtin.find:
     depth: 2
     file_type: directory
     paths: "{{ dein_plugins_dir }}"
@@ -8,7 +8,7 @@
   register: dein_repos_find
 
 - name: Assert plugins directories
-  assert:
+  ansible.builtin.assert:
     that: repo in (dein_repos_find.files | map(attribute='path'))
   loop: "{{ dein_plugins_repos }}"
   loop_control:

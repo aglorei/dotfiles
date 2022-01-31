@@ -1,12 +1,12 @@
 ---
 - name: start-cronie
-  systemd:
+  ansible.builtin.systemd:
     name: cronie
     enabled: true
     state: started
   become: true
 
 - name: start-launchd
-  launchd:
+  community.general.launchd:
     name: "com.{{ ansible_user_id | regex_replace('\\.', '') }}.dotfiles"
     state: started
