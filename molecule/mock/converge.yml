@@ -2,4 +2,5 @@
 - name: Configure files, directories, and packages
   hosts: molecule_mock_1
   tasks:
-    - ansible.builtin.import_tasks: ../../main.yml
+    - name: Configure files, directories, and packages
+      ansible.builtin.import_tasks: ../../main.yml
