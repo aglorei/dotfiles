@@ -1,8 +1,1 @@
----
-- name: Verify
-  hosts: all
-  tasks:
-    - name: Assert dein installation
-      ansible.builtin.include_tasks: resources/verify_dein.yml
-    - name: Assert packages installation
-      ansible.builtin.include_tasks: resources/verify_packages.yml
+../resources/verify.yml
