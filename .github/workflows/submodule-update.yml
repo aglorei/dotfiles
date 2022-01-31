@@ -12,7 +12,7 @@ on:  # yamllint disable-line rule:truthy
 jobs:
   molecule:
     container:
-      image: quay.io/ansible/molecule:3.1.5
+      image: quay.io/ansible/toolset:3.1.5
     name: Execute Molecule aglorei scenario test
     runs-on: ubuntu-latest
     env:

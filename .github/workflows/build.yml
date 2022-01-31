@@ -12,7 +12,7 @@ on:  # yamllint disable-line rule:truthy
 jobs:
   ansible-lint:
     container:
-      image: quay.io/ansible/molecule:3.1.5
+      image: quay.io/ansible/toolset:3.1.5
     name: Lint Ansible files
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +20,7 @@ jobs:
       - run: ansible-lint --force-color
   yamllint:
     container:
-      image: quay.io/ansible/molecule:3.1.5
+      image: quay.io/ansible/toolset:3.1.5
     name: Lint YAML files
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +28,7 @@ jobs:
       - run: yamllint --format github --strict .
   molecule:
     container:
-      image: quay.io/ansible/molecule:3.1.5
+      image: quay.io/ansible/toolset:3.1.5
     name: Execute Molecule mock scenario test
     runs-on: ubuntu-latest
     env:
