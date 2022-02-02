@@ -187,6 +187,7 @@ os_packages:
     - authy
     - barrier
     - brave-browser
+    - discord
     - docker
     - font-mononoki
     - iterm2

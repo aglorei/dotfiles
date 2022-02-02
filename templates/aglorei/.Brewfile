@@ -104,6 +104,8 @@ cask "authy"
 cask "barrier"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Voice and text chat software
+cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
 cask "font-mononoki"
