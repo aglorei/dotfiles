@@ -131,3 +131,5 @@ cask "spotify"
 cask "steam"
 # Multimedia player
 cask "vlc"
+# Video communication and virtual meeting platform
+cask "zoom"

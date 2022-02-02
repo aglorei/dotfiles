@@ -200,6 +200,7 @@ os_packages:
     - spotify
     - steam
     - vlc
+    - zoom
   homebrew_taps:
     - homebrew/bundle
     - homebrew/cask
