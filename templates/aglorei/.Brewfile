@@ -6,6 +6,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # ARP scanning and fingerprinting tool
@@ -32,6 +34,10 @@ brew "fortune"
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Kubernetes package manager
@@ -72,6 +78,8 @@ brew "pipes-sh"
 brew "pstree"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
