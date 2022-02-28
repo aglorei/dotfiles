@@ -8,8 +8,7 @@ localhost
 aglorei-pc-1
 lithium
 S03122-MBPR
-Tienlongs-MacBook-Pro
-Tienlongs-MacBook-Pro-2
+Tienlongs-MBP-2
 
 ##########################
 ## aglorei parent group ##
@@ -31,8 +30,7 @@ lithium
 
 [aglorei_MacOSX]
 S03122-MBPR
-Tienlongs-MacBook-Pro
-Tienlongs-MacBook-Pro-2
+Tienlongs-MBP-2
 
 [aglorei_Ubuntu]
 aglorei-pc-1
@@ -44,8 +42,7 @@ aglorei-pc-1
 [aglorei_personal]
 aglorei-pc-1
 lithium
-Tienlongs-MacBook-Pro
-Tienlongs-MacBook-Pro-2
+Tienlongs-MBP-2
 
 [aglorei_work_1]
 S03122-MBPR
