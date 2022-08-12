@@ -6,8 +6,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # ARP scanning and fingerprinting tool
@@ -16,10 +14,16 @@ brew "arp-scan"
 brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
+# High performance key/value database
+brew "berkeley-db", link: true
 # Cross-platform make
 brew "cmake"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Open source suite of directory software
+brew "openldap"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Command-line tool for DigitalOcean
 brew "doctl"
 # CLI tool for quick access to files and directories
@@ -34,6 +38,8 @@ brew "fortune"
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Core application library for C
+brew "glib"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # GNU Transport Layer Security (TLS) Library
