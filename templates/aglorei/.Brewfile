@@ -14,16 +14,10 @@ brew "arp-scan"
 brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
-# High performance key/value database
-brew "berkeley-db", link: true
 # Cross-platform make
 brew "cmake"
 # Configurable talking characters in ASCII art
 brew "cowsay"
-# Open source suite of directory software
-brew "openldap"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl"
 # Command-line tool for DigitalOcean
 brew "doctl"
 # CLI tool for quick access to files and directories
@@ -38,12 +32,6 @@ brew "fortune"
 brew "fzf"
 # Distributed revision control system
 brew "git"
-# Core application library for C
-brew "glib"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Kubernetes package manager
@@ -84,8 +72,6 @@ brew "pipes-sh"
 brew "pstree"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
@@ -107,7 +93,7 @@ brew "wireshark"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd", args: ["with-logging"]
+brew "koekeishiya/formulae/skhd", args: ["HEAD"]
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
 # Application launcher and productivity software
@@ -122,6 +108,7 @@ cask "brave-browser"
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Programming font
 cask "font-mononoki"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"

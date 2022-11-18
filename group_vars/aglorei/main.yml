@@ -181,7 +181,7 @@ os_packages:
     - zsh
   homebrew_with_options:
     koekeishiya/formulae/skhd:
-      - with-logging
+      - HEAD
   homebrew_casks:
     - alfred
     - authy
