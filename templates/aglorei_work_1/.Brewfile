@@ -12,12 +12,20 @@ brew "ansible"
 brew "arp-scan"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Cross-platform make
 brew "cmake"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Open source suite of directory software
+brew "openldap"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Command-line tool for DigitalOcean
 brew "doctl"
 # CLI tool for quick access to files and directories
@@ -32,6 +40,10 @@ brew "fortune"
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Kubernetes package manager
@@ -46,12 +58,20 @@ brew "jq"
 brew "kubernetes-cli"
 # LastPass command-line interface tool
 brew "lastpass-cli"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
+# TIFF library and utilities
+brew "libtiff"
+# Color management engine supporting ICC profiles
+brew "little-cms2"
 # Run a Kubernetes cluster locally
 brew "minikube"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Diagnose infrastructure problems with metrics, visualizations & alarms
 brew "netdata"
 # Port scanning utility for large networks
@@ -64,6 +84,8 @@ brew "openjdk"
 brew "p7zip"
 # Tool for creating identical machine images for multiple platforms
 brew "packer"
+# Highly capable, feature-rich programming language
+brew "perl"
 # Python dependency management tool
 brew "pipenv"
 # Animated pipes terminal screensaver
@@ -72,6 +94,8 @@ brew "pipes-sh"
 brew "pstree"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
@@ -98,8 +122,6 @@ brew "koekeishiya/formulae/yabai"
 cask "barrier"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Programming font
-cask "font-mononoki"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Provides updates to various Microsoft products
@@ -110,7 +132,7 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Online collaborative whiteboard platform
 cask "miro"
-# Instant messaging application focusing on security
+# Team communication and collaboration software
 cask "slack"
 # Video communication and virtual meeting platform
 cask "zoom"
