@@ -18,14 +18,24 @@ brew "python@3.10"
 brew "azure-cli"
 # Cross-platform make
 brew "cmake"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
 # Configurable talking characters in ASCII art
 brew "cowsay"
 # Open source suite of directory software
 brew "openldap"
-# Zstandard is a real-time compression algorithm
-brew "zstd"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # Command-line tool for DigitalOcean
 brew "doctl"
 # CLI tool for quick access to files and directories
@@ -40,10 +50,6 @@ brew "fortune"
 brew "fzf"
 # Distributed revision control system
 brew "git"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Kubernetes package manager
@@ -58,8 +64,6 @@ brew "jq"
 brew "kubernetes-cli"
 # LastPass command-line interface tool
 brew "lastpass-cli"
-# C library SSHv1/SSHv2 client and server protocols
-brew "libssh"
 # TIFF library and utilities
 brew "libtiff"
 # Color management engine supporting ICC profiles

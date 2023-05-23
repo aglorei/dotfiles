@@ -50,7 +50,9 @@ os_packages:
     - awscli
     - azure-cli
     - cmake
+    - colima
     - cowsay
+    - docker
     - doctl
     - fasd
     - fd
