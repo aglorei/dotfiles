@@ -32,6 +32,9 @@
     pkgs.tree
     pkgs.unzip
 
+    # Fonts
+    pkgs.nerd-fonts.mononoki
+
     # Editor
     pkgs.neovim
   ];
