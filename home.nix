@@ -23,7 +23,9 @@
 
     # Tools
     pkgs.git
+    pkgs.fasd
     pkgs.fd
+    pkgs.fzf
     pkgs.jq
     pkgs.ripgrep
     pkgs.tmux
