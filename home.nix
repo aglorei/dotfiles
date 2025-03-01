@@ -32,11 +32,15 @@
     pkgs.tree
     pkgs.unzip
 
+    # Editor
+    pkgs.neovim
+
     # Fonts
     pkgs.nerd-fonts.mononoki
 
-    # Editor
-    pkgs.neovim
+    # Prompt
+    pkgs.oh-my-zsh
+    pkgs.starship
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -48,8 +52,42 @@
       recursive = true;
     };
 
+    # Starship
+    "${config.xdg.configHome}/starship.toml".source = ./starship/starship.toml;
+
     # Terminal Multiplexer
     ".tmux.conf".source = ./tmux/tmux.conf;
+  };
+
+  # Shell
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      # list
+      ls = "ls -G";
+      ll = "ls -alhHF";
+
+      # grep
+      egrep = "egrep --color";
+      fgrep = "fgrep --color";
+      grep = "grep --color";
+
+      # file utils
+      rm = "rm -i";
+      mv = "mv -i";
+      cp = "cp -i";
+      ln = "ln -i";
+
+      # tmux
+      hack = "tmux a -t hack || tmux new -s hack";
+    };
+  };
+
+  # Prompt
+  programs.starship.enable = true;
+  programs.zsh.oh-my-zsh = {
+    enable = true;
+    plugins = [ "git" "fasd" "fzf" ];
   };
 
   # Let Home Manager install and manage itself.
