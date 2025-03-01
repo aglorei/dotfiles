@@ -29,7 +29,11 @@
     pkgs.neovim
 
     # Fonts
-    pkgs.nerd-fonts.mononoki
+    (pkgs.nerdfonts.override {
+      fonts = [
+        "Mononoki"
+      ];
+    })
 
     # Monitor
     pkgs.btop
@@ -73,16 +77,16 @@
   home.file = {
     # Neovim
     "${config.xdg.configHome}/nvim" = {
-      source = ./nvim;
+      source = ./features/nvim;
       recursive = true;
     };
 
     # Starship
-    "${config.xdg.configHome}/starship.toml".source = ./starship/starship.toml;
+    "${config.xdg.configHome}/starship.toml".source = ./features/starship/starship.toml;
 
     # Terminal
-    "${config.xdg.configHome}/alacritty.toml".source = ./alacritty/alacritty.toml;
-    ".tmux.conf".source = ./tmux/tmux.conf;
+    "${config.xdg.configHome}/alacritty.toml".source = ./features/alacritty/alacritty.toml;
+    ".tmux.conf".source = ./features/tmux/tmux.conf;
   };
 
   # Shell
