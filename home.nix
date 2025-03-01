@@ -84,7 +84,8 @@
     # Starship
     "${config.xdg.configHome}/starship.toml".source = ./starship/starship.toml;
 
-    # Terminal Multiplexer
+    # Terminal
+    "${config.xdg.configHome}/alacritty.toml".source = ./alacritty/alacritty.toml;
     ".tmux.conf".source = ./tmux/tmux.conf;
   };
 
