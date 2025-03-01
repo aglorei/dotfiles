@@ -21,16 +21,16 @@
     # Shell
     pkgs.zsh
 
-    # Tools
-    pkgs.git
-    pkgs.fasd
-    pkgs.fd
-    pkgs.fzf
-    pkgs.jq
-    pkgs.ripgrep
-    pkgs.tmux
-    pkgs.tree
+    # Archive
     pkgs.unzip
+
+    # Client
+    pkgs.awscli2
+    pkgs.azure-cli
+
+    # Containers
+    pkgs.docker
+    pkgs.kubectl
 
     # Editor
     pkgs.neovim
@@ -38,9 +38,38 @@
     # Fonts
     pkgs.nerd-fonts.mononoki
 
+    # Monitor
+    pkgs.btop
+
+    # Network
+    pkgs.arp-scan
+    pkgs.inetutils
+    pkgs.nmap
+    pkgs.wireshark
+
+    # NodeJS
+    pkgs.nodejs
+
     # Prompt
     pkgs.oh-my-zsh
     pkgs.starship
+
+    # Python
+    pkgs.python3
+
+    # Utility
+    pkgs.git
+    pkgs.gnupg
+    pkgs.fasd
+    pkgs.fd
+    pkgs.figlet
+    pkgs.fzf
+    pkgs.jq
+    pkgs.neofetch
+    pkgs.pstree
+    pkgs.ripgrep
+    pkgs.tmux
+    pkgs.tree
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
