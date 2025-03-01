@@ -21,7 +21,7 @@ nix-channel --update
 Optionally, enable flakes as an experimental feature [without additional command-line options](https://wiki.nixos.org/wiki/Flakes#Other_Distros,_without_Home-Manager).
 
 ## Step 3: Initialize Configuration
-Include a `homeConfigurations` username and host combination (i.e., `echo $(whoami)@$(hostname)`) in [flake.nix](./flake.nix).
+Include a `homeConfigurations` username and host combination (i.e., `echo $(whoami)@$(hostname -s)`) in [flake.nix](./flake.nix).
 ```nix
 homeConfigurations = {
   # FIXME replace with your username@hostname
@@ -39,5 +39,5 @@ homeConfigurations = {
 ## Step 4: Activate Configuration
 Apply the home configuration with a username and host combination.
 ```sh
-nix run home-manager/release-24.11 -- switch --flake .#$(whoami)@$(hostname)
+nix run home-manager/release-24.11 -- switch --flake .#$(whoami)@$(hostname -s)
 ```
