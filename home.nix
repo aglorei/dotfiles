@@ -84,7 +84,11 @@
   };
 
   # Prompt
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.zsh.oh-my-zsh = {
     enable = true;
     plugins = [ "git" "fasd" "fzf" ];
