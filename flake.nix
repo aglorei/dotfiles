@@ -34,7 +34,7 @@
     homeManagerModules = import ./modules/home-manager;
 
     homeConfigurations = {
-      "tienlong.pham@j2wnhywdqd" = home-manager.lib.homeManagerConfiguration {
+      "tienlong.pham@J2WNHYWDQD" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
