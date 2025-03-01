@@ -81,13 +81,11 @@
       # tmux
       hack = "tmux a -t hack || tmux new -s hack";
     };
+    syntaxHighlighting.enable = true;
   };
 
   # Prompt
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  programs.starship.enable = true;
 
   programs.zsh.oh-my-zsh = {
     enable = true;
