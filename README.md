@@ -20,8 +20,24 @@ nix-channel --update
 ```
 Optionally, enable flakes as an experimental feature [without additional command-line options](https://wiki.nixos.org/wiki/Flakes#Other_Distros,_without_Home-Manager).
 
-## Step 3: Initialize and Active Configuration
-Here, execute the initial activation while overriding the default configuration directory to the cloned repository destination.
+## Step 3: Initialize Configuration
+Include a `homeConfigurations` username and host combination (i.e., `echo $(whoami)@$(hostname)`) in [flake.nix](./flake.nix).
+```nix
+homeConfigurations = {
+  # FIXME replace with your username@hostname
+  "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
+    pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+    extraSpecialArgs = { inherit inputs outputs; };
+    modules = [
+      ./home-manager/commons.nix
+      # > include additional nixes <
+    ];
+  };
+};
+```
+
+## Step 4: Activate Configuration
+Apply the home configuration with a username and host combination.
 ```sh
-nix run home-manager/release-24.11 -- init --switch $HOME/github.com/aglorei/dotfiles
+nix run home-manager/release-24.11 -- switch --flake .#$(whoami)@$(hostname)
 ```
