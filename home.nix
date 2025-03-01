@@ -42,12 +42,14 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".tmux.conf".source = ./tmux.conf;
-
+    # Neovim
     "${config.xdg.configHome}/nvim" = {
       source = ./nvim;
       recursive = true;
     };
+
+    # Terminal Multiplexer
+    ".tmux.conf".source = ./tmux/tmux.conf;
   };
 
   # Let Home Manager install and manage itself.
