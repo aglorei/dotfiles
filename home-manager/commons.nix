@@ -29,7 +29,11 @@
     pkgs.neovim
 
     # Fonts
-    pkgs.nerd-fonts.mononoki
+    (pkgs.nerdfonts.override {
+      fonts = [
+        "Mononoki"
+      ];
+    })
 
     # Monitor
     pkgs.btop
