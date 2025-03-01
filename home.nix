@@ -14,9 +14,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # Shell
-    pkgs.zsh
-
     # Archive
     pkgs.unzip
 
@@ -52,6 +49,9 @@
 
     # Python
     pkgs.python3
+
+    # Shell
+    pkgs.zsh
 
     # Utility
     pkgs.git
