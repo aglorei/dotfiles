@@ -29,7 +29,7 @@ homeConfigurations = {
     pkgs = nixpkgs.legacyPackages.aarch64-darwin;
     extraSpecialArgs = { inherit inputs outputs; };
     modules = [
-      ./home-manager/commons.nix
+      ./home/your-username/your-hostname.nix
       # > include additional nixes <
     ];
   };
