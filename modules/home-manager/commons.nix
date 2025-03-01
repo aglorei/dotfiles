@@ -1,18 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
-  home.username = "tienlong.pham";
-  home.homeDirectory = "/Users/tienlong.pham";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  home.stateVersion = "24.11";
-
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = [
     # Archive
     pkgs.unzip
@@ -77,16 +65,16 @@
   home.file = {
     # Neovim
     "${config.xdg.configHome}/nvim" = {
-      source = ./features/nvim;
+      source = ./assets/nvim;
       recursive = true;
     };
 
     # Starship
-    "${config.xdg.configHome}/starship.toml".source = ./features/starship/starship.toml;
+    "${config.xdg.configHome}/starship.toml".source = ./assets/starship/starship.toml;
 
     # Terminal
-    "${config.xdg.configHome}/alacritty.toml".source = ./features/alacritty/alacritty.toml;
-    ".tmux.conf".source = ./features/tmux/tmux.conf;
+    "${config.xdg.configHome}/alacritty.toml".source = ./assets/alacritty/alacritty.toml;
+    ".tmux.conf".source = ./assets/tmux/tmux.conf;
   };
 
   # Shell
