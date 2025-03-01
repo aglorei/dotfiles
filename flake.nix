@@ -1,5 +1,5 @@
 {
-  description = "Home Manager Dotfiles Configuration";
+  description = "Aglorei's Home Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
