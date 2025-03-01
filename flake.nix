@@ -38,14 +38,14 @@
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
-          ./home-manager/commons.nix
+          ./home/aglorei/MacBookPro.nix
         ];
       };
       "tienlong.pham@j2wnhywdqd" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
-          ./home-manager/commons.nix
+          ./home/tienlong.pham/j2wnhywdqd.nix
         ];
       };
     };
