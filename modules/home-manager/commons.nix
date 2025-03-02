@@ -13,6 +13,9 @@
     pkgs.docker
     pkgs.kubectl
 
+    # Cryptography
+    pkgs.gnupg
+
     # Editor
     pkgs.neovim
 
@@ -42,12 +45,13 @@
     # Python
     pkgs.python3
 
+    # SCM
+    pkgs.git
+
     # Shell
     pkgs.zsh
 
     # Utility
-    pkgs.git
-    pkgs.gnupg
     pkgs.fasd
     pkgs.fd
     pkgs.figlet
@@ -100,6 +104,14 @@
       hack = "tmux a -t hack || tmux new -s hack";
     };
     syntaxHighlighting.enable = true;
+  };
+
+  # Cryptography
+  programs.gpg.enable = true;
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses;
   };
 
   # Prompt
