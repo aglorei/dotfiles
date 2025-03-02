@@ -79,7 +79,6 @@
       recursive = true;
     };
 
-
     # Prompt
     "${config.xdg.configHome}/starship.toml".source = ./assets/starship/starship.toml;
 
