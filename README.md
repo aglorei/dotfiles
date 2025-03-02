@@ -57,3 +57,6 @@ Apply the home configuration with a username and host combination.
 ```sh
 nix run home-manager/release-24.11 -- switch --flake .#$(whoami)@$(hostname -s)
 ```
+
+# Acknowledgements
+- [Nix Starter Configrations](https://github.com/Misterio77/nix-starter-configs)
