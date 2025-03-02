@@ -73,6 +73,13 @@
       recursive = true;
     };
 
+    # Monitor
+   "${config.xdg.configHome}/btop" = {
+      source = ./assets/btop;
+      recursive = true;
+    };
+
+
     # Prompt
     "${config.xdg.configHome}/starship.toml".source = ./assets/starship/starship.toml;
 
