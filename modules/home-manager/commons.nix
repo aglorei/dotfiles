@@ -51,6 +51,9 @@
     # Shell
     pkgs.zsh
 
+    # Terminal
+    pkgs.tmux
+
     # Utility
     pkgs.fasd
     pkgs.fd
@@ -60,26 +63,39 @@
     pkgs.neofetch
     pkgs.pstree
     pkgs.ripgrep
-    pkgs.tmux
     pkgs.tree
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # Neovim
+    # Editor
     "${config.xdg.configHome}/nvim" = {
       source = ./assets/nvim;
       recursive = true;
     };
 
-    # Starship
+    # Prompt
     "${config.xdg.configHome}/starship.toml".source = ./assets/starship/starship.toml;
 
     # Terminal
     "${config.xdg.configHome}/alacritty.toml".source = ./assets/alacritty/alacritty.toml;
     ".tmux.conf".source = ./assets/tmux/tmux.conf;
   };
+
+  # Cryptography
+  programs.gpg.enable = true;
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses;
+  };
+
+  # Home-Manager
+  programs.home-manager.enable = true;
+
+  # Prompt
+  programs.starship.enable = true;
 
   # Shell
   programs.zsh = {
@@ -106,22 +122,8 @@
     syntaxHighlighting.enable = true;
   };
 
-  # Cryptography
-  programs.gpg.enable = true;
-
-  services.gpg-agent = {
-    enable = true;
-    pinentryPackage = pkgs.pinentry-curses;
-  };
-
-  # Prompt
-  programs.starship.enable = true;
-
   programs.zsh.oh-my-zsh = {
     enable = true;
     plugins = [ "git" "fasd" "fzf" ];
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
