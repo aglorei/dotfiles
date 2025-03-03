@@ -18,5 +18,5 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
-  programs.git.includes = [{ path = "${config.xdg.configHome}/git/config.local" }];
+  programs.git.includes = [{ path = "${config.xdg.configHome}/git/config.local"; }];
 }
