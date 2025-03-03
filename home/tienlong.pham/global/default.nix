@@ -20,7 +20,7 @@
 
   programs.git = {
     enable = true;
-    includes = [{ path = "${config.xdg.configHome}/git/config.local"; }];
+    includes = [{path = "${config.xdg.configHome}/git/config.local";}];
     extraConfig = {
       init.defaultBranch = "main";
       core.editor = "nvim";

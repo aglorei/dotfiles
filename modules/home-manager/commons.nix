@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = [
     # Archive
     pkgs.unzip
@@ -74,7 +76,7 @@
     };
 
     # Monitor
-   "${config.xdg.configHome}/btop" = {
+    "${config.xdg.configHome}/btop" = {
       source = ./assets/btop;
       recursive = true;
     };
@@ -123,6 +125,6 @@
 
   programs.zsh.oh-my-zsh = {
     enable = true;
-    plugins = [ "git" "fasd" "fzf" ];
+    plugins = ["git" "fasd" "fzf"];
   };
 }

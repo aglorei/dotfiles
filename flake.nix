@@ -36,14 +36,14 @@
     homeConfigurations = {
       "aglorei@macbookpro" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        extraSpecialArgs = { inherit inputs outputs; };
+        extraSpecialArgs = {inherit inputs outputs;};
         modules = [
           ./home/aglorei/macbookpro.nix
         ];
       };
       "tienlong.pham@j2wnhywdqd" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        extraSpecialArgs = { inherit inputs outputs; };
+        extraSpecialArgs = {inherit inputs outputs;};
         modules = [
           ./home/tienlong.pham/j2wnhywdqd.nix
         ];
