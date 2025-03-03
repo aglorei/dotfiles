@@ -56,11 +56,11 @@
 
     # Utility
     pkgs.fasd
+    pkgs.fastfetch
     pkgs.fd
     pkgs.figlet
     pkgs.fzf
     pkgs.jq
-    pkgs.neofetch
     pkgs.pstree
     pkgs.ripgrep
     pkgs.tree
