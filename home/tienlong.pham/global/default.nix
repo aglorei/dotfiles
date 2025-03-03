@@ -18,5 +18,13 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
-  programs.git.includes = [{ path = "${config.xdg.configHome}/git/config.local"; }];
+  programs.git = {
+    enable = true;
+    includes = [{ path = "${config.xdg.configHome}/git/config.local"; }];
+    extraConfig = {
+      init.defaultBranch = "main";
+      core.editor = "nvim";
+      core.excludesFile = "${config.xdg.configHome}/git/ignore";
+    };
+  };
 }
