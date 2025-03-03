@@ -1,6 +1,22 @@
 # Dotfiles
 Configurations that I use in a [flakes](https://wiki.nixos.org/wiki/Flakes) approach. You can if you want, but no one is forcing you to.
 
+# Batteries Included
+
+## Editor
+- [LazyVim](https://www.lazyvim.org/)
+
+## Font
+- [Mononoki Nerd Font](https://madmalik.github.io/mononoki/)
+
+## Shell
+- [Oh My Zsh](https://ohmyz.sh/)
+- [Starship](https://starship.rs/)
+- [tmux](https://github.com/tmux/tmux/wiki)
+
+## Theme
+- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+
 # Installation
 
 ## Prerequisites
@@ -41,3 +57,6 @@ Apply the home configuration with a username and host combination.
 ```sh
 nix run home-manager/release-24.11 -- switch --flake .#$(whoami)@$(hostname -s)
 ```
+
+# Acknowledgements
+- [Nix Starter Configrations](https://github.com/Misterio77/nix-starter-configs)

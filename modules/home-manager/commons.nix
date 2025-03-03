@@ -13,6 +13,9 @@
     pkgs.docker
     pkgs.kubectl
 
+    # Cryptography
+    pkgs.gnupg
+
     # Editor
     pkgs.neovim
 
@@ -42,12 +45,16 @@
     # Python
     pkgs.python3
 
+    # SCM
+    pkgs.git
+
     # Shell
     pkgs.zsh
 
+    # Terminal
+    pkgs.tmux
+
     # Utility
-    pkgs.git
-    pkgs.gnupg
     pkgs.fasd
     pkgs.fd
     pkgs.figlet
@@ -56,26 +63,38 @@
     pkgs.neofetch
     pkgs.pstree
     pkgs.ripgrep
-    pkgs.tmux
     pkgs.tree
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
-    # Neovim
+    # Editor
     "${config.xdg.configHome}/nvim" = {
       source = ./assets/nvim;
       recursive = true;
     };
 
-    # Starship
+    # Monitor
+   "${config.xdg.configHome}/btop" = {
+      source = ./assets/btop;
+      recursive = true;
+    };
+
+    # Prompt
     "${config.xdg.configHome}/starship.toml".source = ./assets/starship/starship.toml;
+
+    # SCM
+    "${config.xdg.configHome}/git/ignore".source = ./assets/git/ignore;
 
     # Terminal
     "${config.xdg.configHome}/alacritty.toml".source = ./assets/alacritty/alacritty.toml;
     ".tmux.conf".source = ./assets/tmux/tmux.conf;
   };
+
+  # Home-Manager
+  programs.home-manager.enable = true;
+
+  # Prompt
+  programs.starship.enable = true;
 
   # Shell
   programs.zsh = {
@@ -102,14 +121,8 @@
     syntaxHighlighting.enable = true;
   };
 
-  # Prompt
-  programs.starship.enable = true;
-
   programs.zsh.oh-my-zsh = {
     enable = true;
     plugins = [ "git" "fasd" "fzf" ];
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
