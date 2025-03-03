@@ -36,7 +36,7 @@ local config = {
       "#C5C9C5",
     },
   },
-  font = wezterm.font "Mononoki Nerd Font",
+  font = wezterm.font "Mononoki Nerd Font Mono",
   force_reverse_video_cursor = true,
   enable_tab_bar = false;
   macos_window_background_blur = 20,
