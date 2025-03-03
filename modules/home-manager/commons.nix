@@ -87,14 +87,6 @@
     ".tmux.conf".source = ./assets/tmux/tmux.conf;
   };
 
-  # Cryptography
-  programs.gpg.enable = true;
-
-  services.gpg-agent = {
-    enable = true;
-    pinentryPackage = pkgs.pinentry-curses;
-  };
-
   # Home-Manager
   programs.home-manager.enable = true;
 
