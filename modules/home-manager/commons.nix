@@ -18,6 +18,11 @@
     # Cryptography
     pkgs.gnupg
 
+    # Diagnostic
+    pkgs.btop
+    pkgs.fastfetch
+    pkgs.pstree
+
     # Editor
     pkgs.neovim
 
@@ -27,9 +32,6 @@
         "Mononoki"
       ];
     })
-
-    # Monitor
-    pkgs.btop
 
     # Network
     pkgs.arp-scan
@@ -58,26 +60,28 @@
 
     # Utility
     pkgs.fasd
-    pkgs.fastfetch
     pkgs.fd
-    pkgs.figlet
     pkgs.fzf
     pkgs.jq
-    pkgs.pstree
     pkgs.ripgrep
     pkgs.tree
   ];
 
   home.file = {
-    # Editor
-    "${config.xdg.configHome}/nvim" = {
-      source = ./assets/nvim;
+    # Diagnostic
+    "${config.xdg.configHome}/btop" = {
+      source = ./assets/btop;
       recursive = true;
     };
 
-    # Monitor
-    "${config.xdg.configHome}/btop" = {
-      source = ./assets/btop;
+    "${config.xdg.configHome}/fastfetch" = {
+      source = ./assets/fastfetch;
+      recursive = true;
+    };
+
+    # Editor
+    "${config.xdg.configHome}/nvim" = {
+      source = ./assets/nvim;
       recursive = true;
     };
 
