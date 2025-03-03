@@ -86,7 +86,7 @@
     "${config.xdg.configHome}/git/ignore".source = ./assets/git/ignore;
 
     # Terminal
-    "${config.xdg.configHome}/alacritty.toml".source = ./assets/alacritty/alacritty.toml;
+    "${config.xdg.configHome}/wezterm/wezterm.lua".source = ./assets/wezterm/wezterm.lua;
     ".tmux.conf".source = ./assets/tmux/tmux.conf;
   };
 
