@@ -17,4 +17,6 @@
     enable = true;
     pinentryPackage = pkgs.pinentry-curses;
   };
+
+  programs.git.includes = [{ path = "${config.xdg.configHome}/git/config.local" }];
 }
