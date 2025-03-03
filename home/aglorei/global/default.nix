@@ -25,8 +25,9 @@
     userEmail = "10876966+aglorei@users.noreply.github.com";
     extraConfig = {
       init.defaultBranch = "main";
-
       commit.gpgSign = true;
+      core.editor = "nvim";
+      core.excludesFile = "${config.xdg.configHome}/git/ignore";
       user.signing.key = "ED8839A2";
     };
   };

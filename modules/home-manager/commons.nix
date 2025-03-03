@@ -82,6 +82,9 @@
     # Prompt
     "${config.xdg.configHome}/starship.toml".source = ./assets/starship/starship.toml;
 
+    # SCM
+    "${config.xdg.configHome}/git/ignore".source = ./assets/git/ignore;
+
     # Terminal
     "${config.xdg.configHome}/alacritty.toml".source = ./assets/alacritty/alacritty.toml;
     ".tmux.conf".source = ./assets/tmux/tmux.conf;
