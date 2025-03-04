@@ -1,12 +1,13 @@
 {
-  inputs,
-  lib,
   pkgs,
   config,
   outputs,
   ...
 }: {
-  imports = builtins.attrValues outputs.homeManagerModules;
+  imports = [
+    outputs.homeManagerModules.commons
+  ];
+
   home.username = "aglorei";
   home.homeDirectory = "/Users/${config.home.username}";
 
