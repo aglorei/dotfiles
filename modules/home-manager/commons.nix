@@ -10,6 +10,7 @@
     # Client
     pkgs.awscli2
     pkgs.azure-cli
+    pkgs.gh
 
     # Containers
     pkgs.docker
