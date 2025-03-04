@@ -50,6 +50,9 @@
     # Python
     pkgs.python3
 
+    # Rust
+    pkgs.cargo
+
     # SCM
     pkgs.git
 
