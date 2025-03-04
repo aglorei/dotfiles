@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = [
     # Archive
     pkgs.unzip
@@ -16,6 +18,11 @@
     # Cryptography
     pkgs.gnupg
 
+    # Diagnostic
+    pkgs.btop
+    pkgs.fastfetch
+    pkgs.pstree
+
     # Editor
     pkgs.neovim
 
@@ -25,9 +32,6 @@
         "Mononoki"
       ];
     })
-
-    # Monitor
-    pkgs.btop
 
     # Network
     pkgs.arp-scan
@@ -57,25 +61,27 @@
     # Utility
     pkgs.fasd
     pkgs.fd
-    pkgs.figlet
     pkgs.fzf
     pkgs.jq
-    pkgs.neofetch
-    pkgs.pstree
     pkgs.ripgrep
     pkgs.tree
   ];
 
   home.file = {
-    # Editor
-    "${config.xdg.configHome}/nvim" = {
-      source = ./assets/nvim;
+    # Diagnostic
+    "${config.xdg.configHome}/btop" = {
+      source = ./assets/btop;
       recursive = true;
     };
 
-    # Monitor
-   "${config.xdg.configHome}/btop" = {
-      source = ./assets/btop;
+    "${config.xdg.configHome}/fastfetch" = {
+      source = ./assets/fastfetch;
+      recursive = true;
+    };
+
+    # Editor
+    "${config.xdg.configHome}/nvim" = {
+      source = ./assets/nvim;
       recursive = true;
     };
 
@@ -86,7 +92,7 @@
     "${config.xdg.configHome}/git/ignore".source = ./assets/git/ignore;
 
     # Terminal
-    "${config.xdg.configHome}/alacritty.toml".source = ./assets/alacritty/alacritty.toml;
+    "${config.xdg.configHome}/wezterm/wezterm.lua".source = ./assets/wezterm/wezterm.lua;
     ".tmux.conf".source = ./assets/tmux/tmux.conf;
   };
 
@@ -123,6 +129,6 @@
 
   programs.zsh.oh-my-zsh = {
     enable = true;
-    plugins = [ "git" "fasd" "fzf" ];
+    plugins = ["git" "fasd" "fzf"];
   };
 }

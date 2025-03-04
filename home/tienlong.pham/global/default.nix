@@ -18,13 +18,22 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
+  # SCM
   programs.git = {
     enable = true;
-    includes = [{ path = "${config.xdg.configHome}/git/config.local"; }];
+    includes = [{path = "${config.xdg.configHome}/git/config.local";}];
     extraConfig = {
       init.defaultBranch = "main";
       core.editor = "nvim";
       core.excludesFile = "${config.xdg.configHome}/git/ignore";
     };
+  };
+
+  # SSH
+  programs.ssh = {
+    enable = true;
+    userKnownHostsFile = "/dev/null";
+    extraConfig = "StrictHostKeyChecking no";
+    includes = ["config.local"];
   };
 }
