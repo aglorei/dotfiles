@@ -8,6 +8,12 @@
     outputs.homeManagerModules.commons
   ];
 
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
+  };
+
   home.username = "tienlong.pham";
   home.homeDirectory = "/Users/${config.home.username}";
 
