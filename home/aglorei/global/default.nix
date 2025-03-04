@@ -1,14 +1,25 @@
 {
-  inputs,
-  lib,
   pkgs,
   config,
   outputs,
   ...
 }: {
-  imports = builtins.attrValues outputs.homeManagerModules;
+  imports = [
+    outputs.homeManagerModules.commons
+  ];
+
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
+  };
+
   home.username = "aglorei";
   home.homeDirectory = "/Users/${config.home.username}";
+
+  home.packages = [
+    pkgs.unstable.aichat
+  ];
 
   # Cryptography
   programs.gpg.enable = true;
