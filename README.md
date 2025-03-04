@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # Dotfiles
 
 Configurations that I use in a [flakes](https://wiki.nixos.org/wiki/Flakes) approach. You can if you want, but no one is forcing you to.
