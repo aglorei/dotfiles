@@ -13,7 +13,6 @@
     pkgs.gh
 
     # Containers
-    pkgs.docker
     pkgs.kubectl
 
     # Cryptography
