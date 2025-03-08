@@ -15,7 +15,6 @@
   };
 
   home.username = "aglorei";
-  home.homeDirectory = "/Users/${config.home.username}";
 
   home.packages = [
     pkgs.unstable.aichat

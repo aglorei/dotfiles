@@ -41,6 +41,13 @@
           ./home/aglorei/macbookpro.nix
         ];
       };
+      "aglorei@mikasa" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          ./home/aglorei/mikasa.nix
+        ];
+      };
       "tienlong.pham@j2wnhywdqd" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {inherit inputs outputs;};
