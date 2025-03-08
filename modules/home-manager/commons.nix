@@ -48,6 +48,7 @@
     pkgs.starship
 
     # Python
+    pkgs.poetry
     pkgs.python3
 
     # Rust
