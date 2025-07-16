@@ -62,6 +62,9 @@
     # Terminal
     pkgs.tmux
 
+    # Terraform
+    pkgs.terraform
+
     # Utility
     pkgs.fasd
     pkgs.fd
