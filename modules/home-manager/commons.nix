@@ -42,9 +42,6 @@
     # NodeJS
     pkgs.nodejs
 
-    # OpenTofu
-    pkgs.opentofu
-
     # Prompt
     pkgs.oh-my-zsh
     pkgs.starship
@@ -64,6 +61,9 @@
 
     # Terminal
     pkgs.tmux
+
+    # Terraform
+    pkgs.terraform
 
     # Utility
     pkgs.fasd
