@@ -25,33 +25,39 @@
       "x86_64-darwin"
     ];
 
-    forAllSystems = nixpkgs.lib.genAttrs systems;
+    forAllSystems = pkgsFunc: nixpkgs.lib.genAttrs systems (system:
+      pkgsFunc (import nixpkgs { inherit system; config.allowUnfree = true; })
+    );
+
+    mkHomeConfig = { system, modulePaths }:
+      home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = { inherit inputs outputs; };
+        modules = modulePaths;
+      };
   in {
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    packages = forAllSystems (pkgs: import ./pkgs pkgs);
+    formatter = forAllSystems (pkgs: pkgs.alejandra);
 
     overlays = import ./overlays {inherit inputs;};
     homeManagerModules = import ./modules/home-manager;
 
     homeConfigurations = {
-      "aglorei@macbookpro" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
+      "aglorei@macbookpro" = mkHomeConfig {
+        system = "aarch64-darwin";
+        modulePaths = [
           ./home/aglorei/macbookpro.nix
         ];
       };
-      "aglorei@mikasa" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
+      "aglorei@mikasa" = mkHomeConfig {
+        system = "x86_64-linux";
+        modulePaths = [
           ./home/aglorei/mikasa.nix
         ];
       };
-      "tienlong.pham@j2wnhywdqd" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
+      "tienlong.pham@j2wnhywdqd" = mkHomeConfig {
+        system = "aarch64-darwin";
+        modulePaths = [
           ./home/tienlong.pham/j2wnhywdqd.nix
         ];
       };
