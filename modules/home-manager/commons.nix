@@ -28,11 +28,7 @@
     pkgs.neovim
 
     # Fonts
-    (pkgs.nerdfonts.override {
-      fonts = [
-        "Mononoki"
-      ];
-    })
+    pkgs.nerd-fonts.mononoki
 
     # Network
     pkgs.arp-scan
