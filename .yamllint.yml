@@ -1,0 +1,14 @@
+---
+extends: default
+
+rules:
+  quoted-strings:
+    quote-type: any
+    required: only-when-needed
+    extra-required: []
+    extra-allowed: []
+    allow-quoted-quotes: false
+    check-keys: false
+  truthy:
+    allowed-values: ["true", "false", "on"]
+    check-keys: true
