@@ -7,7 +7,12 @@ Configurations that I use in a [flakes](https://wiki.nixos.org/wiki/Flakes) appr
 
 ### Editor
 
-- [LazyVim](https://www.lazyvim.org/)
+- [Neovim](https://neovim.io/) with [LazyVim](https://www.lazyvim.org/)
+- Custom plugins and configuration in `modules/home-manager/assets/nvim/`
+
+### Terminal
+
+- [WezTerm](https://wezfurlong.org/wezterm/) (see `modules/home-manager/assets/wezterm/wezterm.lua`)
 
 ### Font
 
@@ -21,14 +26,21 @@ Configurations that I use in a [flakes](https://wiki.nixos.org/wiki/Flakes) appr
 
 ### Theme
 
-- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+- [Kanagawa](https://github.com/rebelot/kanagawa.nvim) (for Neovim and terminal)
+
+## Structure
+
+- `flake.nix`: Flake entrypoint, defines system/home-manager configurations.
+- `modules/home-manager/`: Home Manager modules and assets (Neovim, WezTerm, etc).
+- `home/<user>/<host>.nix`: Per-user, per-host Home Manager configs.
+- `pkgs/` and `overlays/`: Custom packages and overlays.
 
 ## Installation
 
 ### Prerequisites
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- [Nix](https://nix.dev/install-nix)
+- [Nix](https://nix.dev/install-nix) (with flakes enabled)
 
 ### Step 1: Clone Repository
 
@@ -55,11 +67,10 @@ Include a `homeConfigurations` username and host combination (i.e., `echo $(whoa
 
 ```nix
 homeConfigurations = {
-  # FIXME replace with your username@hostname
-  "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
-    pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-    extraSpecialArgs = { inherit inputs outputs; };
-    modules = [
+  # Replace with your username@hostname
+  "your-username@your-hostname" = mkHomeConfig {
+    system = "aarch64-darwin"; # or x86_64-darwin/linux
+    modulePaths = [
       ./home/your-username/your-hostname.nix
       # > include additional nixes <
     ];
@@ -77,4 +88,4 @@ nix run home-manager/release-25.05 -- switch --flake .#$(whoami)@$(hostname -s)
 
 ## Acknowledgements
 
-- [Nix Starter Configrations](https://github.com/Misterio77/nix-starter-configs)
+- [Nix Starter Configurations](https://github.com/Misterio77/nix-starter-configs)
