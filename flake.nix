@@ -17,14 +17,6 @@
   } @ inputs: let
     inherit (self) outputs;
 
-    systems = [
-      "aarch64-linux"
-      "i686-linux"
-      "x86_64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
-    ];
-
     mkHomeConfig = { system, modulePaths }:
       home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
