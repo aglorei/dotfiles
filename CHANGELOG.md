@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/aglorei/aglorei-dotfiles/compare/v1.1.0...v1.2.0) (2026-09-09)
+
+
+### Features
+
+* Add terraform-docs and pre-commit ([#98](https://github.com/aglorei/aglorei-dotfiles/issues/98)) ([b26e028](https://github.com/aglorei/aglorei-dotfiles/commit/b26e0287616e28c88684ae79a90d21a37bdf0b6f))
+
 ## [1.1.0](https://github.com/aglorei/dotfiles/compare/v1.0.1...v1.1.0) (2026-06-09)
 
 
